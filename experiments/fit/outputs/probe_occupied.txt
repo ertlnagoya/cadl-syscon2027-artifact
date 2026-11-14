@@ -1,0 +1,6 @@
+Fit of contract 'ROAD_USE'
+  neighbourhood: RIDE_SERVICE, ROAD_SHARING
+  [PASS] F1: Every role reference in a resolved position names a declared actor
+  [PASS] F2: Assumptions and guarantees are jointly satisfiable
+  [WARN] F3 exclusion: The assumptions exclude each other: the contracts govern disjoint situations (need not be a defect) [RIDE_SERVICE]
+Verdict: FITS

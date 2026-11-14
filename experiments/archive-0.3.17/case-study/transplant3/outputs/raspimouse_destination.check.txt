@@ -1,0 +1,2 @@
+Type check passed: raspimouse_destination.cadl
+rc=0

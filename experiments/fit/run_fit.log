@@ -1,0 +1,18 @@
+MA1 {'n': 43, 'flagged': 43, 'verify_detected': 43, 'F1': 43, 'review': 24}
+MA2 {'n': 150, 'flagged': 143, 'verify_detected': 150, 'F1': 143}
+MA3 {'n': 95, 'flagged': 54, 'verify_detected': 0, 'review': 54}
+MC1 {'n': 25, 'flagged': 25, 'verify_detected': 25, 'F2': 25, 'F3': 20}
+MC2 {'n': 23, 'flagged': 23, 'verify_detected': 23, 'F2': 23}
+MC3 {'n': 10, 'flagged': 9, 'verify_detected': 9, 'F3': 9}
+MC4 {'n': 10, 'flagged': 0, 'verify_detected': 0}
+MD1 {'n': 29, 'flagged': 0, 'verify_detected': 29}
+ML1 {'n': 14, 'flagged': 14, 'verify_detected': 14, 'F1': 14}
+ML2 {'n': 28, 'flagged': 28, 'verify_detected': 28, 'F1': 28}
+ML3 {'n': 6, 'flagged': 6, 'verify_detected': 6, 'F1': 6}
+ML4 {'n': 6, 'flagged': 6, 'verify_detected': 6, 'F1': 6}
+ML5 {'n': 7, 'flagged': 7, 'verify_detected': 7, 'F1': 7}
+ML6 {'n': 7, 'flagged': 7, 'verify_detected': 7, 'F1': 7}
+MP1 {'n': 62, 'flagged': 62, 'verify_detected': 62, 'F1': 62}
+MR1 {'n': 8, 'flagged': 0, 'verify_detected': 8}
+MR2 {'n': 24, 'flagged': 0, 'verify_detected': 24}
+MR3 {'n': 9, 'flagged': 0, 'verify_detected': 9}

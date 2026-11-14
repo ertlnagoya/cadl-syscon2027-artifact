@@ -1,0 +1,2 @@
+Type check passed: delivery_sla_adapted.cadl
+rc=0

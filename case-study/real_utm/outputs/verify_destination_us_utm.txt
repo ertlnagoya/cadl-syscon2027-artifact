@@ -1,0 +1,59 @@
+Verifying: destination_us_utm.cadl
+  SoS: US_UTM
+
+--- Type Check ---
+  [PASS] Type check passed
+
+--- SMT Verification ---
+  [PASS] Contract 'PARTICIPATION' consistency: Assumes and guarantees are jointly satisfiable
+  [PASS] Contract 'MANNED_PARTICIPATION' consistency: Assumes and guarantees are jointly satisfiable
+  [PASS] Contract 'EQUITY' consistency: Assumes and guarantees are jointly satisfiable
+  [PASS] Contract 'UVR' consistency: Assumes and guarantees are jointly satisfiable
+  [PASS] Contract 'USS_NETWORK_PARADIGM' consistency: Assumes and guarantees are jointly satisfiable
+  [PASS] Contract 'STRATEGIC_DECONFLICTION' consistency: Assumes and guarantees are jointly satisfiable
+  [PASS] Contract 'ATC_LOW_ALTITUDE' consistency: Assumes and guarantees are jointly satisfiable
+  [PASS] Contract 'REMOTE_ID' consistency: Assumes and guarantees are jointly satisfiable
+  [PASS] Contract 'PARTICIPATION' assumptions: No assumptions (the contract applies unconditionally)
+  [PASS] Contract 'MANNED_PARTICIPATION' assumptions: No assumptions (the contract applies unconditionally)
+  [PASS] Contract 'EQUITY' assumptions: No assumptions (the contract applies unconditionally)
+  [PASS] Contract 'UVR' assumptions: No assumptions (the contract applies unconditionally)
+  [PASS] Contract 'USS_NETWORK_PARADIGM' assumptions: No assumptions (the contract applies unconditionally)
+  [PASS] Contract 'STRATEGIC_DECONFLICTION' assumptions: No assumptions (the contract applies unconditionally)
+  [PASS] Contract 'ATC_LOW_ALTITUDE' assumptions: No assumptions (the contract applies unconditionally)
+  [PASS] Contract 'REMOTE_ID' assumptions: No assumptions (the contract applies unconditionally)
+  [PASS] Contract 'PARTICIPATION' entailment: No assumes or guarantees to check entailment
+  [PASS] Contract 'MANNED_PARTICIPATION' entailment: No assumes or guarantees to check entailment
+  [PASS] Contract 'EQUITY' entailment: No assumes or guarantees to check entailment
+  [PASS] Contract 'UVR' entailment: No assumes or guarantees to check entailment
+  [PASS] Contract 'USS_NETWORK_PARADIGM' entailment: No assumes or guarantees to check entailment
+  [PASS] Contract 'STRATEGIC_DECONFLICTION' entailment: No assumes or guarantees to check entailment
+  [PASS] Contract 'ATC_LOW_ALTITUDE' entailment: No assumes or guarantees to check entailment
+  [PASS] Contract 'REMOTE_ID' entailment: No assumes or guarantees to check entailment
+  [PASS] Cross-contract 'PARTICIPATION' x 'MANNED_PARTICIPATION': Contracts are jointly satisfiable
+  [PASS] Cross-contract 'PARTICIPATION' x 'EQUITY': Contracts are jointly satisfiable
+  [PASS] Cross-contract 'PARTICIPATION' x 'UVR': Contracts are jointly satisfiable
+  [PASS] Cross-contract 'PARTICIPATION' x 'USS_NETWORK_PARADIGM': Contracts are jointly satisfiable
+  [PASS] Cross-contract 'PARTICIPATION' x 'STRATEGIC_DECONFLICTION': Contracts are jointly satisfiable
+  [PASS] Cross-contract 'PARTICIPATION' x 'ATC_LOW_ALTITUDE': Contracts are jointly satisfiable
+  [PASS] Cross-contract 'PARTICIPATION' x 'REMOTE_ID': Contracts are jointly satisfiable
+  [PASS] Cross-contract 'MANNED_PARTICIPATION' x 'EQUITY': Contracts are jointly satisfiable
+  [PASS] Cross-contract 'MANNED_PARTICIPATION' x 'UVR': Contracts are jointly satisfiable
+  [PASS] Cross-contract 'MANNED_PARTICIPATION' x 'REMOTE_ID': Contracts are jointly satisfiable
+  [PASS] Cross-contract 'EQUITY' x 'UVR': Contracts are jointly satisfiable
+  [PASS] Cross-contract 'EQUITY' x 'USS_NETWORK_PARADIGM': Contracts are jointly satisfiable
+  [PASS] Cross-contract 'EQUITY' x 'STRATEGIC_DECONFLICTION': Contracts are jointly satisfiable
+  [PASS] Cross-contract 'EQUITY' x 'ATC_LOW_ALTITUDE': Contracts are jointly satisfiable
+  [PASS] Cross-contract 'EQUITY' x 'REMOTE_ID': Contracts are jointly satisfiable
+  [PASS] Cross-contract 'UVR' x 'USS_NETWORK_PARADIGM': Contracts are jointly satisfiable
+  [PASS] Cross-contract 'UVR' x 'STRATEGIC_DECONFLICTION': Contracts are jointly satisfiable
+  [PASS] Cross-contract 'UVR' x 'ATC_LOW_ALTITUDE': Contracts are jointly satisfiable
+  [PASS] Cross-contract 'UVR' x 'REMOTE_ID': Contracts are jointly satisfiable
+  [PASS] Cross-contract 'USS_NETWORK_PARADIGM' x 'STRATEGIC_DECONFLICTION': Contracts are jointly satisfiable
+  [PASS] Cross-contract 'STRATEGIC_DECONFLICTION' x 'ATC_LOW_ALTITUDE': Contracts are jointly satisfiable
+  [PASS] Cross-contract 'STRATEGIC_DECONFLICTION' x 'REMOTE_ID': Contracts are jointly satisfiable
+  [PASS] Cross-contract 'ATC_LOW_ALTITUDE' x 'REMOTE_ID': Contracts are jointly satisfiable
+
+--- Deadlock Detection ---
+  (no protocols to analyze)
+
+Verification PASSED: 48/48 checks passed

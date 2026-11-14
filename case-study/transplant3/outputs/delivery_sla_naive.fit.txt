@@ -1,0 +1,17 @@
+Fit of contract 'DELIVERY_SLA'
+  neighbourhood: ROUTE_VERIFICATION, DELIVERY_ASSIGNMENT_CONTRACT
+  [FAIL] F1: Undefined actor 'DISPATCHER' referenced in contract 'DELIVERY_SLA' parties
+  [FAIL] F1: Undefined actor 'CUSTOMER' referenced in contract 'DELIVERY_SLA' parties
+  [FAIL] F1: Undefined actor 'DISPATCHER' referenced in contract 'DELIVERY_SLA' assume
+  [FAIL] F1: Undefined actor 'DISPATCHER' referenced in contract 'DELIVERY_SLA' authority
+  [FAIL] F1: Undefined actor 'DISPATCHER' referenced in contract 'DELIVERY_SLA' information views
+  [FAIL] F1: Undefined actor 'CUSTOMER' referenced in contract 'DELIVERY_SLA' information views
+  [FAIL] F1: Undefined actor 'DISPATCHER' referenced in contract 'DELIVERY_SLA' information sharing
+  [FAIL] F1: Undefined actor 'DISPATCHER' referenced in contract 'DELIVERY_SLA' information sharing
+  [FAIL] F1: Undefined actor 'DISPATCHER' referenced in contract 'DELIVERY_SLA' information sharing
+  [FAIL] F1: Undefined actor 'CUSTOMER' referenced in contract 'DELIVERY_SLA' information sharing
+  [WARN] review: Names in unresolved positions that are not declared actors: DISPATCHER (rules, guards, violation, incentives)
+  [PASS] F2: Assumptions and guarantees are jointly satisfiable
+  [PASS] F3: Jointly satisfiable with the 2 contract(s) of the neighbourhood
+  [INFO] info: Assumptions the destination's guarantees do not establish (supply them with the rule or in the destination): DISPATCHER.is_operational == true; ROBOT[i].battery > 20
+Verdict: MISFIT

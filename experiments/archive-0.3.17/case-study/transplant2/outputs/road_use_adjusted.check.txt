@@ -1,0 +1,2 @@
+Type check passed: road_use_adjusted.cadl
+rc=0

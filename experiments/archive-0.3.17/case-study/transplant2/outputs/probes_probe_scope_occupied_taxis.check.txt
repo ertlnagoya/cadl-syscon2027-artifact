@@ -1,0 +1,2 @@
+Type check passed: probe_scope_occupied_taxis.cadl
+rc=0

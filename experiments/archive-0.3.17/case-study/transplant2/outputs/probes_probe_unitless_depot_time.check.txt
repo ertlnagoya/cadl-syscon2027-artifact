@@ -1,0 +1,2 @@
+Type check passed: probe_unitless_depot_time.cadl
+rc=0

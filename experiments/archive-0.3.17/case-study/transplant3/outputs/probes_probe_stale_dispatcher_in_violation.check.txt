@@ -1,0 +1,2 @@
+Type check passed: probe_stale_dispatcher_in_violation.cadl
+rc=0

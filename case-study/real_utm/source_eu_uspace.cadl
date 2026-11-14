@@ -1,0 +1,83 @@
+# SOURCE: EU U-space, Implementing Regulation (EU) 2021/664 and SERA.6005(c) of (EU) 2021/666.
+# Article texts as consolidated in EASA, Easy Access Rules for U-space, May 2024 ("EAR", page numbers
+# are "Page x of 157"). Each contract states the provision it formalizes. Predicates are the
+# propositions the provisions make true; numbers are not modelled.
+sos:
+  name: "EU_Uspace"
+  type: Directed
+  version: "1.0.0"
+  description: "U-space airspace designated by a Member State, with certified U-space service providers"
+
+  actors:
+    - id: MEMBER_STATE          # Art. 3(1),(4); Art. 5(1)  EAR p.24, p.49
+      role: "designates_airspace"
+    - id: COMPETENT_AUTHORITY   # Art. 18(a),(e),(g)         EAR p.132-133
+      role: "certifies_and_oversees"
+    - id: USSP                  # Art. 7(1)                  EAR p.63
+      role: "uspace_service_provider"
+    - id: CISP                  # Art. 5(4),(6)              EAR p.49-50
+      role: "common_information_service"
+    - id: ATS_UNIT              # Art. 4; Art. 5(2)          EAR p.46, p.49
+      role: "air_traffic_services"
+    - id: UAS_OPERATOR          # Art. 6                     EAR p.56
+      role: "uas_operator"
+    - id: MANNED_NON_ATC        # SERA.6005(c)
+      role: "manned_aircraft_without_atc_service"
+
+  contracts:
+    # Art. 2(1), 3(2), 6(4)-(5): every UAS operation in U-space airspace is subject to UAS flight
+    # authorisation, requested from the operator's USSP before each flight.  EAR p.23, 24, 56
+    - id: MANDATORY_SERVICES
+      parties: [MEMBER_STATE, UAS_OPERATOR, USSP]
+      guarantee:
+        - "every_flight_authorised == true"
+
+    # SERA.6005(c): manned aircraft in U-space airspace without an ATC service make themselves
+    # continuously electronically conspicuous to the USSPs.
+    - id: E_CONSPICUITY
+      parties: [MANNED_NON_ATC, USSP]
+      guarantee:
+        - "manned_traffic_conspicuous == true"
+
+    # Art. 10(8)-(9), AMC1 and GM1 Art. 10(9)(a): priority to special operations, then first come
+    # first served; a new request cannot override an approved one.  EAR p.82, p.90
+    - id: PRIORITY_RULES
+      parties: [USSP, UAS_OPERATOR]
+      guarantee:
+        - "priority_order_defined == true"
+
+    # Art. 7(5)(a), 10(6): USSPs exchange information and resolve conflicting requests received
+    # through different USSPs.  EAR p.63, p.82
+    - id: USSP_COORDINATION
+      parties: [USSP]
+      guarantee:
+        - "providers_coordinate_conflicting_requests == true"
+
+    # Art. 10(10), Art. 4: USSPs re-check authorisations against dynamic restrictions and ATS
+    # information and update or withdraw them.  EAR p.46, p.83
+    - id: DYNAMIC_RECHECK
+      parties: [USSP, ATS_UNIT, MEMBER_STATE]
+      guarantee:
+        - "authorisations_withdrawable_on_restriction == true"
+
+    # THE RULE TO TRANSPLANT. Art. 10(2)(b): the USSP accepts a request only if the flight is free
+    # of intersection in space and time with every other notified authorisation in the same
+    # U-space airspace (GM1 Art. 10(a): "a strategic deconfliction tool").  EAR p.82-83
+    # Its assumptions are what the other provisions above make true.
+    - id: FLIGHT_AUTHORISATION
+      parties: [UAS_OPERATOR, USSP]
+      assume:
+        - "every_flight_authorised == true"
+        - "manned_traffic_conspicuous == true"
+        - "priority_order_defined == true"
+        - "providers_coordinate_conflicting_requests == true"
+        - "authorisations_withdrawable_on_restriction == true"
+      guarantee:
+        - "USSP.rejects_intersecting_requests == true"
+        - "intersecting_authorised_flights == 0"
+      authority:
+        decision_scope: "flight_authorisation"
+        decision_holder: USSP
+      violation:
+        detect: "intersecting_authorised_flights > 0"
+        action: "notify(COMPETENT_AUTHORITY)"

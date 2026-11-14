@@ -1,0 +1,1 @@
+Type check passed: road_use_adapted.cadl

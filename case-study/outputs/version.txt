@@ -1,0 +1,1 @@
+cadl 0.3.28 (cadl_repo commit 01658ea, 2026-11-13)

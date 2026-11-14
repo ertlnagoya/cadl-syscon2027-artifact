@@ -1,0 +1,11 @@
+contracts,modes,variant,neighbourhood,verdict,conflicts,fit_cpu_s,loadavg1
+10,2,fits,10,fits,0,0.075,8.3
+10,2,misfit,10,misfit,4,0.096,8.3
+20,4,fits,20,fits,0,0.183,8.3
+20,4,misfit,20,misfit,4,0.209,7.9
+50,8,fits,50,fits,0,0.576,7.9
+50,8,misfit,50,misfit,6,0.6,7.6
+100,16,fits,100,fits,0,1.797,8.8
+100,16,misfit,100,misfit,6,1.854,8.0
+200,32,fits,200,fits,0,6.06,6.3
+200,32,misfit,200,misfit,6,6.244,7.8

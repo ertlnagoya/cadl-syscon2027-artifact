@@ -1,0 +1,910 @@
+sos:
+  name: "Scale"
+  type: Collaborative
+  version: "1.0.0"
+  actors:
+    - id: HUB
+      role: "hub"
+    - id: AGENT_0
+      role: "agent"
+    - id: "AGENT_1[1..N]"
+      role: "agent"
+    - id: AGENT_2
+      role: "agent"
+    - id: "AGENT_3[1..N]"
+      role: "agent"
+    - id: AGENT_4
+      role: "agent"
+    - id: "AGENT_5[1..N]"
+      role: "agent"
+    - id: AGENT_6
+      role: "agent"
+    - id: "AGENT_7[1..N]"
+      role: "agent"
+    - id: AGENT_8
+      role: "agent"
+    - id: "AGENT_9[1..N]"
+      role: "agent"
+    - id: AGENT_10
+      role: "agent"
+    - id: "AGENT_11[1..N]"
+      role: "agent"
+    - id: AGENT_12
+      role: "agent"
+    - id: "AGENT_13[1..N]"
+      role: "agent"
+    - id: AGENT_14
+      role: "agent"
+    - id: "AGENT_15[1..N]"
+      role: "agent"
+    - id: AGENT_16
+      role: "agent"
+    - id: "AGENT_17[1..N]"
+      role: "agent"
+    - id: AGENT_18
+      role: "agent"
+    - id: "AGENT_19[1..N]"
+      role: "agent"
+    - id: AGENT_20
+      role: "agent"
+    - id: "AGENT_21[1..N]"
+      role: "agent"
+    - id: AGENT_22
+      role: "agent"
+    - id: "AGENT_23[1..N]"
+      role: "agent"
+    - id: AGENT_24
+      role: "agent"
+    - id: "AGENT_25[1..N]"
+      role: "agent"
+    - id: AGENT_26
+      role: "agent"
+    - id: "AGENT_27[1..N]"
+      role: "agent"
+    - id: AGENT_28
+      role: "agent"
+    - id: "AGENT_29[1..N]"
+      role: "agent"
+    - id: AGENT_30
+      role: "agent"
+    - id: "AGENT_31[1..N]"
+      role: "agent"
+    - id: AGENT_32
+      role: "agent"
+    - id: "AGENT_33[1..N]"
+      role: "agent"
+    - id: AGENT_34
+      role: "agent"
+    - id: "AGENT_35[1..N]"
+      role: "agent"
+    - id: AGENT_36
+      role: "agent"
+    - id: "AGENT_37[1..N]"
+      role: "agent"
+    - id: AGENT_38
+      role: "agent"
+    - id: "AGENT_39[1..N]"
+      role: "agent"
+    - id: AGENT_40
+      role: "agent"
+    - id: "AGENT_41[1..N]"
+      role: "agent"
+    - id: AGENT_42
+      role: "agent"
+    - id: "AGENT_43[1..N]"
+      role: "agent"
+    - id: AGENT_44
+      role: "agent"
+    - id: "AGENT_45[1..N]"
+      role: "agent"
+    - id: AGENT_46
+      role: "agent"
+    - id: "AGENT_47[1..N]"
+      role: "agent"
+    - id: AGENT_48
+      role: "agent"
+    - id: "AGENT_49[1..N]"
+      role: "agent"
+    - id: AGENT_50
+      role: "agent"
+  contracts:
+    - id: C0
+      parties: [HUB, AGENT_0]
+      assume:
+        - "x0 >= 0"
+        - "x0 <= 100"
+        - "s0 <= 50"
+      guarantee:
+        - "y0 <= x0 + 10"
+        - "s1 >= 0"
+      authority:
+        decision_holder: HUB
+        beta: 0.5
+      information:
+        alpha: 0.5
+      incentives:
+        lambda: 0.5
+    - id: C1
+      parties: [HUB, "AGENT_1[*]"]
+      assume:
+        - "x1 >= 0"
+        - "x1 <= 100"
+        - "s1 <= 50"
+      guarantee:
+        - "y1 <= x1 + 10"
+        - "s2 >= 0"
+      authority:
+        decision_holder: HUB
+        beta: 0.5
+      information:
+        alpha: 0.5
+      incentives:
+        lambda: 0.5
+    - id: C2
+      parties: [HUB, AGENT_2]
+      assume:
+        - "x2 >= 0"
+        - "x2 <= 100"
+        - "s2 <= 50"
+      guarantee:
+        - "y2 <= x2 + 10"
+        - "s3 >= 0"
+      authority:
+        decision_holder: HUB
+        beta: 0.5
+      information:
+        alpha: 0.5
+      incentives:
+        lambda: 0.5
+    - id: C3
+      parties: [HUB, "AGENT_3[*]"]
+      assume:
+        - "x3 >= 0"
+        - "x3 <= 100"
+        - "s3 <= 50"
+      guarantee:
+        - "y3 <= x3 + 10"
+        - "s4 >= 0"
+      authority:
+        decision_holder: HUB
+        beta: 0.5
+      information:
+        alpha: 0.5
+      incentives:
+        lambda: 0.5
+    - id: C4
+      parties: [HUB, AGENT_4]
+      assume:
+        - "x4 >= 0"
+        - "x4 <= 100"
+        - "s4 <= 50"
+      guarantee:
+        - "y4 <= x4 + 10"
+        - "s5 >= 0"
+      authority:
+        decision_holder: HUB
+        beta: 0.5
+      information:
+        alpha: 0.5
+      incentives:
+        lambda: 0.5
+    - id: C5
+      parties: [HUB, "AGENT_5[*]"]
+      assume:
+        - "x5 >= 0"
+        - "x5 <= 100"
+        - "s5 <= 50"
+      guarantee:
+        - "y5 <= x5 + 10"
+        - "s6 >= 0"
+      authority:
+        decision_holder: HUB
+        beta: 0.5
+      information:
+        alpha: 0.5
+      incentives:
+        lambda: 0.5
+    - id: C6
+      parties: [HUB, AGENT_6]
+      assume:
+        - "x6 >= 0"
+        - "x6 <= 100"
+        - "s6 <= 50"
+      guarantee:
+        - "y6 <= x6 + 10"
+        - "s7 >= 0"
+      authority:
+        decision_holder: HUB
+        beta: 0.5
+      information:
+        alpha: 0.5
+      incentives:
+        lambda: 0.5
+    - id: C7
+      parties: [HUB, "AGENT_7[*]"]
+      assume:
+        - "x7 >= 0"
+        - "x7 <= 100"
+        - "s7 <= 50"
+      guarantee:
+        - "y7 <= x7 + 10"
+        - "s8 >= 0"
+      authority:
+        decision_holder: HUB
+        beta: 0.5
+      information:
+        alpha: 0.5
+      incentives:
+        lambda: 0.5
+    - id: C8
+      parties: [HUB, AGENT_8]
+      assume:
+        - "x8 >= 0"
+        - "x8 <= 100"
+        - "s8 <= 50"
+      guarantee:
+        - "y8 <= x8 + 10"
+        - "s9 >= 0"
+      authority:
+        decision_holder: HUB
+        beta: 0.5
+      information:
+        alpha: 0.5
+      incentives:
+        lambda: 0.5
+    - id: C9
+      parties: [HUB, "AGENT_9[*]"]
+      assume:
+        - "x9 >= 0"
+        - "x9 <= 100"
+        - "s9 <= 50"
+      guarantee:
+        - "y9 <= x9 + 10"
+        - "s10 >= 0"
+      authority:
+        decision_holder: HUB
+        beta: 0.5
+      information:
+        alpha: 0.5
+      incentives:
+        lambda: 0.5
+    - id: C10
+      parties: [HUB, AGENT_10]
+      assume:
+        - "x10 >= 0"
+        - "x10 <= 100"
+        - "s10 <= 50"
+      guarantee:
+        - "y10 <= x10 + 10"
+        - "s11 >= 0"
+      authority:
+        decision_holder: HUB
+        beta: 0.5
+      information:
+        alpha: 0.5
+      incentives:
+        lambda: 0.5
+    - id: C11
+      parties: [HUB, "AGENT_11[*]"]
+      assume:
+        - "x11 >= 0"
+        - "x11 <= 100"
+        - "s11 <= 50"
+      guarantee:
+        - "y11 <= x11 + 10"
+        - "s12 >= 0"
+      authority:
+        decision_holder: HUB
+        beta: 0.5
+      information:
+        alpha: 0.5
+      incentives:
+        lambda: 0.5
+    - id: C12
+      parties: [HUB, AGENT_12]
+      assume:
+        - "x12 >= 0"
+        - "x12 <= 100"
+        - "s12 <= 50"
+      guarantee:
+        - "y12 <= x12 + 10"
+        - "s13 >= 0"
+      authority:
+        decision_holder: HUB
+        beta: 0.5
+      information:
+        alpha: 0.5
+      incentives:
+        lambda: 0.5
+    - id: C13
+      parties: [HUB, "AGENT_13[*]"]
+      assume:
+        - "x13 >= 0"
+        - "x13 <= 100"
+        - "s13 <= 50"
+      guarantee:
+        - "y13 <= x13 + 10"
+        - "s14 >= 0"
+      authority:
+        decision_holder: HUB
+        beta: 0.5
+      information:
+        alpha: 0.5
+      incentives:
+        lambda: 0.5
+    - id: C14
+      parties: [HUB, AGENT_14]
+      assume:
+        - "x14 >= 0"
+        - "x14 <= 100"
+        - "s14 <= 50"
+      guarantee:
+        - "y14 <= x14 + 10"
+        - "s15 >= 0"
+      authority:
+        decision_holder: HUB
+        beta: 0.5
+      information:
+        alpha: 0.5
+      incentives:
+        lambda: 0.5
+    - id: C15
+      parties: [HUB, "AGENT_15[*]"]
+      assume:
+        - "x15 >= 0"
+        - "x15 <= 100"
+        - "s15 <= 50"
+      guarantee:
+        - "y15 <= x15 + 10"
+        - "s16 >= 0"
+      authority:
+        decision_holder: HUB
+        beta: 0.5
+      information:
+        alpha: 0.5
+      incentives:
+        lambda: 0.5
+    - id: C16
+      parties: [HUB, AGENT_16]
+      assume:
+        - "x16 >= 0"
+        - "x16 <= 100"
+        - "s16 <= 50"
+      guarantee:
+        - "y16 <= x16 + 10"
+        - "s17 >= 0"
+      authority:
+        decision_holder: HUB
+        beta: 0.5
+      information:
+        alpha: 0.5
+      incentives:
+        lambda: 0.5
+    - id: C17
+      parties: [HUB, "AGENT_17[*]"]
+      assume:
+        - "x17 >= 0"
+        - "x17 <= 100"
+        - "s17 <= 50"
+      guarantee:
+        - "y17 <= x17 + 10"
+        - "s18 >= 0"
+      authority:
+        decision_holder: HUB
+        beta: 0.5
+      information:
+        alpha: 0.5
+      incentives:
+        lambda: 0.5
+    - id: C18
+      parties: [HUB, AGENT_18]
+      assume:
+        - "x18 >= 0"
+        - "x18 <= 100"
+        - "s18 <= 50"
+      guarantee:
+        - "y18 <= x18 + 10"
+        - "s19 >= 0"
+      authority:
+        decision_holder: HUB
+        beta: 0.5
+      information:
+        alpha: 0.5
+      incentives:
+        lambda: 0.5
+    - id: C19
+      parties: [HUB, "AGENT_19[*]"]
+      assume:
+        - "x19 >= 0"
+        - "x19 <= 100"
+        - "s19 <= 50"
+      guarantee:
+        - "y19 <= x19 + 10"
+        - "s20 >= 0"
+      authority:
+        decision_holder: HUB
+        beta: 0.5
+      information:
+        alpha: 0.5
+      incentives:
+        lambda: 0.5
+    - id: C20
+      parties: [HUB, AGENT_20]
+      assume:
+        - "x20 >= 0"
+        - "x20 <= 100"
+        - "s20 <= 50"
+      guarantee:
+        - "y20 <= x20 + 10"
+        - "s21 >= 0"
+      authority:
+        decision_holder: HUB
+        beta: 0.5
+      information:
+        alpha: 0.5
+      incentives:
+        lambda: 0.5
+    - id: C21
+      parties: [HUB, "AGENT_21[*]"]
+      assume:
+        - "x21 >= 0"
+        - "x21 <= 100"
+        - "s21 <= 50"
+      guarantee:
+        - "y21 <= x21 + 10"
+        - "s22 >= 0"
+      authority:
+        decision_holder: HUB
+        beta: 0.5
+      information:
+        alpha: 0.5
+      incentives:
+        lambda: 0.5
+    - id: C22
+      parties: [HUB, AGENT_22]
+      assume:
+        - "x22 >= 0"
+        - "x22 <= 100"
+        - "s22 <= 50"
+      guarantee:
+        - "y22 <= x22 + 10"
+        - "s23 >= 0"
+      authority:
+        decision_holder: HUB
+        beta: 0.5
+      information:
+        alpha: 0.5
+      incentives:
+        lambda: 0.5
+    - id: C23
+      parties: [HUB, "AGENT_23[*]"]
+      assume:
+        - "x23 >= 0"
+        - "x23 <= 100"
+        - "s23 <= 50"
+      guarantee:
+        - "y23 <= x23 + 10"
+        - "s24 >= 0"
+      authority:
+        decision_holder: HUB
+        beta: 0.5
+      information:
+        alpha: 0.5
+      incentives:
+        lambda: 0.5
+    - id: C24
+      parties: [HUB, AGENT_24]
+      assume:
+        - "x24 >= 0"
+        - "x24 <= 100"
+        - "s24 <= 50"
+      guarantee:
+        - "y24 <= x24 + 10"
+        - "s25 >= 0"
+      authority:
+        decision_holder: HUB
+        beta: 0.5
+      information:
+        alpha: 0.5
+      incentives:
+        lambda: 0.5
+    - id: C25
+      parties: [HUB, "AGENT_25[*]"]
+      assume:
+        - "x25 >= 0"
+        - "x25 <= 100"
+        - "s25 <= 50"
+      guarantee:
+        - "y25 <= x25 + 10"
+        - "s26 >= 0"
+      authority:
+        decision_holder: HUB
+        beta: 0.5
+      information:
+        alpha: 0.5
+      incentives:
+        lambda: 0.5
+    - id: C26
+      parties: [HUB, AGENT_26]
+      assume:
+        - "x26 >= 0"
+        - "x26 <= 100"
+        - "s26 <= 50"
+      guarantee:
+        - "y26 <= x26 + 10"
+        - "s27 >= 0"
+      authority:
+        decision_holder: HUB
+        beta: 0.5
+      information:
+        alpha: 0.5
+      incentives:
+        lambda: 0.5
+    - id: C27
+      parties: [HUB, "AGENT_27[*]"]
+      assume:
+        - "x27 >= 0"
+        - "x27 <= 100"
+        - "s27 <= 50"
+      guarantee:
+        - "y27 <= x27 + 10"
+        - "s28 >= 0"
+      authority:
+        decision_holder: HUB
+        beta: 0.5
+      information:
+        alpha: 0.5
+      incentives:
+        lambda: 0.5
+    - id: C28
+      parties: [HUB, AGENT_28]
+      assume:
+        - "x28 >= 0"
+        - "x28 <= 100"
+        - "s28 <= 50"
+      guarantee:
+        - "y28 <= x28 + 10"
+        - "s29 >= 0"
+      authority:
+        decision_holder: HUB
+        beta: 0.5
+      information:
+        alpha: 0.5
+      incentives:
+        lambda: 0.5
+    - id: C29
+      parties: [HUB, "AGENT_29[*]"]
+      assume:
+        - "x29 >= 0"
+        - "x29 <= 100"
+        - "s29 <= 50"
+      guarantee:
+        - "y29 <= x29 + 10"
+        - "s30 >= 0"
+      authority:
+        decision_holder: HUB
+        beta: 0.5
+      information:
+        alpha: 0.5
+      incentives:
+        lambda: 0.5
+    - id: C30
+      parties: [HUB, AGENT_30]
+      assume:
+        - "x30 >= 0"
+        - "x30 <= 100"
+        - "s30 <= 50"
+      guarantee:
+        - "y30 <= x30 + 10"
+        - "s31 >= 0"
+      authority:
+        decision_holder: HUB
+        beta: 0.5
+      information:
+        alpha: 0.5
+      incentives:
+        lambda: 0.5
+    - id: C31
+      parties: [HUB, "AGENT_31[*]"]
+      assume:
+        - "x31 >= 0"
+        - "x31 <= 100"
+        - "s31 <= 50"
+      guarantee:
+        - "y31 <= x31 + 10"
+        - "s32 >= 0"
+      authority:
+        decision_holder: HUB
+        beta: 0.5
+      information:
+        alpha: 0.5
+      incentives:
+        lambda: 0.5
+    - id: C32
+      parties: [HUB, AGENT_32]
+      assume:
+        - "x32 >= 0"
+        - "x32 <= 100"
+        - "s32 <= 50"
+      guarantee:
+        - "y32 <= x32 + 10"
+        - "s33 >= 0"
+      authority:
+        decision_holder: HUB
+        beta: 0.5
+      information:
+        alpha: 0.5
+      incentives:
+        lambda: 0.5
+    - id: C33
+      parties: [HUB, "AGENT_33[*]"]
+      assume:
+        - "x33 >= 0"
+        - "x33 <= 100"
+        - "s33 <= 50"
+      guarantee:
+        - "y33 <= x33 + 10"
+        - "s34 >= 0"
+      authority:
+        decision_holder: HUB
+        beta: 0.5
+      information:
+        alpha: 0.5
+      incentives:
+        lambda: 0.5
+    - id: C34
+      parties: [HUB, AGENT_34]
+      assume:
+        - "x34 >= 0"
+        - "x34 <= 100"
+        - "s34 <= 50"
+      guarantee:
+        - "y34 <= x34 + 10"
+        - "s35 >= 0"
+      authority:
+        decision_holder: HUB
+        beta: 0.5
+      information:
+        alpha: 0.5
+      incentives:
+        lambda: 0.5
+    - id: C35
+      parties: [HUB, "AGENT_35[*]"]
+      assume:
+        - "x35 >= 0"
+        - "x35 <= 100"
+        - "s35 <= 50"
+      guarantee:
+        - "y35 <= x35 + 10"
+        - "s36 >= 0"
+      authority:
+        decision_holder: HUB
+        beta: 0.5
+      information:
+        alpha: 0.5
+      incentives:
+        lambda: 0.5
+    - id: C36
+      parties: [HUB, AGENT_36]
+      assume:
+        - "x36 >= 0"
+        - "x36 <= 100"
+        - "s36 <= 50"
+      guarantee:
+        - "y36 <= x36 + 10"
+        - "s37 >= 0"
+      authority:
+        decision_holder: HUB
+        beta: 0.5
+      information:
+        alpha: 0.5
+      incentives:
+        lambda: 0.5
+    - id: C37
+      parties: [HUB, "AGENT_37[*]"]
+      assume:
+        - "x37 >= 0"
+        - "x37 <= 100"
+        - "s37 <= 50"
+      guarantee:
+        - "y37 <= x37 + 10"
+        - "s38 >= 0"
+      authority:
+        decision_holder: HUB
+        beta: 0.5
+      information:
+        alpha: 0.5
+      incentives:
+        lambda: 0.5
+    - id: C38
+      parties: [HUB, AGENT_38]
+      assume:
+        - "x38 >= 0"
+        - "x38 <= 100"
+        - "s38 <= 50"
+      guarantee:
+        - "y38 <= x38 + 10"
+        - "s39 >= 0"
+      authority:
+        decision_holder: HUB
+        beta: 0.5
+      information:
+        alpha: 0.5
+      incentives:
+        lambda: 0.5
+    - id: C39
+      parties: [HUB, "AGENT_39[*]"]
+      assume:
+        - "x39 >= 0"
+        - "x39 <= 100"
+        - "s39 <= 50"
+      guarantee:
+        - "y39 <= x39 + 10"
+        - "s40 >= 0"
+      authority:
+        decision_holder: HUB
+        beta: 0.5
+      information:
+        alpha: 0.5
+      incentives:
+        lambda: 0.5
+    - id: C40
+      parties: [HUB, AGENT_40]
+      assume:
+        - "x40 >= 0"
+        - "x40 <= 100"
+        - "s40 <= 50"
+      guarantee:
+        - "y40 <= x40 + 10"
+        - "s41 >= 0"
+      authority:
+        decision_holder: HUB
+        beta: 0.5
+      information:
+        alpha: 0.5
+      incentives:
+        lambda: 0.5
+    - id: C41
+      parties: [HUB, "AGENT_41[*]"]
+      assume:
+        - "x41 >= 0"
+        - "x41 <= 100"
+        - "s41 <= 50"
+      guarantee:
+        - "y41 <= x41 + 10"
+        - "s42 >= 0"
+      authority:
+        decision_holder: HUB
+        beta: 0.5
+      information:
+        alpha: 0.5
+      incentives:
+        lambda: 0.5
+    - id: C42
+      parties: [HUB, AGENT_42]
+      assume:
+        - "x42 >= 0"
+        - "x42 <= 100"
+        - "s42 <= 50"
+      guarantee:
+        - "y42 <= x42 + 10"
+        - "s43 >= 0"
+      authority:
+        decision_holder: HUB
+        beta: 0.5
+      information:
+        alpha: 0.5
+      incentives:
+        lambda: 0.5
+    - id: C43
+      parties: [HUB, "AGENT_43[*]"]
+      assume:
+        - "x43 >= 0"
+        - "x43 <= 100"
+        - "s43 <= 50"
+      guarantee:
+        - "y43 <= x43 + 10"
+        - "s44 >= 0"
+      authority:
+        decision_holder: HUB
+        beta: 0.5
+      information:
+        alpha: 0.5
+      incentives:
+        lambda: 0.5
+    - id: C44
+      parties: [HUB, AGENT_44]
+      assume:
+        - "x44 >= 0"
+        - "x44 <= 100"
+        - "s44 <= 50"
+      guarantee:
+        - "y44 <= x44 + 10"
+        - "s45 >= 0"
+      authority:
+        decision_holder: HUB
+        beta: 0.5
+      information:
+        alpha: 0.5
+      incentives:
+        lambda: 0.5
+    - id: C45
+      parties: [HUB, "AGENT_45[*]"]
+      assume:
+        - "x45 >= 0"
+        - "x45 <= 100"
+        - "s45 <= 50"
+      guarantee:
+        - "y45 <= x45 + 10"
+        - "s46 >= 0"
+      authority:
+        decision_holder: HUB
+        beta: 0.5
+      information:
+        alpha: 0.5
+      incentives:
+        lambda: 0.5
+    - id: C46
+      parties: [HUB, AGENT_46]
+      assume:
+        - "x46 >= 0"
+        - "x46 <= 100"
+        - "s46 <= 50"
+      guarantee:
+        - "y46 <= x46 + 10"
+        - "s47 >= 0"
+      authority:
+        decision_holder: HUB
+        beta: 0.5
+      information:
+        alpha: 0.5
+      incentives:
+        lambda: 0.5
+    - id: C47
+      parties: [HUB, "AGENT_47[*]"]
+      assume:
+        - "x47 >= 0"
+        - "x47 <= 100"
+        - "s47 <= 50"
+      guarantee:
+        - "y47 <= x47 + 10"
+        - "s48 >= 0"
+      authority:
+        decision_holder: HUB
+        beta: 0.5
+      information:
+        alpha: 0.5
+      incentives:
+        lambda: 0.5
+    - id: C48
+      parties: [HUB, AGENT_48]
+      assume:
+        - "x48 >= 0"
+        - "x48 <= 100"
+        - "s48 <= 50"
+      guarantee:
+        - "y48 <= x48 + 10"
+        - "s49 >= 0"
+      authority:
+        decision_holder: HUB
+        beta: 0.5
+      information:
+        alpha: 0.5
+      incentives:
+        lambda: 0.5
+    - id: C49
+      parties: [HUB, "AGENT_49[*]"]
+      assume:
+        - "x49 >= 0"
+        - "x49 <= 100"
+        - "s49 <= 50"
+      guarantee:
+        - "y49 <= x49 + 10"
+        - "s50 >= 0"
+      authority:
+        decision_holder: HUB
+        beta: 0.5
+      information:
+        alpha: 0.5
+      incentives:
+        lambda: 0.5

@@ -1,0 +1,87 @@
+sos:
+  name: LivingAloneAdjusted
+  type: Collaborative
+  version: 1.2.0
+  extensions:
+  - sos-dsl: 0.1
+  actors:
+  - id: RESIDENT
+    role: student_living_alone
+    autonomy: high
+  - id: HOME_ROBOT
+    role: reminder_and_observer
+    autonomy: low
+  - id: EMPLOYER
+    role: part_time_employer
+    autonomy: high
+  contracts:
+  - id: EVENING_ROUTINE
+    parties:
+    - RESIDENT
+    - HOME_ROBOT
+    assume:
+    - home_arrival_hour <= 23
+    - HOME_ROBOT.is_operational == true
+    guarantee:
+    - lights_out_hour <= 24
+    - home_arrival_hour > 23
+    authority:
+      decision_holder: RESIDENT
+      beta: 0.2
+    information:
+      alpha: 0.5
+      sharing:
+      - 'RESIDENT -> HOME_ROBOT : study_status'
+    responsibilities:
+      HOME_ROBOT:
+      - remind_at_23
+      RESIDENT:
+      - finish_homework_before_lights_out
+    incentives:
+      lambda: 0.3
+      rules:
+      - penalty(RESIDENT, -1) when lights_out_missed
+    lifecycle:
+      states:
+      - Scheduled
+      - Reminded
+      - Done
+      - Missed
+      initial: Scheduled
+      terminal:
+      - Done
+      - Missed
+      transitions:
+      - id: remind
+        from: Scheduled
+        to: Reminded
+        on: 'HOME_ROBOT -> RESIDENT : reminder'
+      - id: finish
+        from: Reminded
+        to: Done
+        on: RESIDENT.lights == off
+        deadline: 1h
+        on_violation:
+          transition: Missed
+          severity: Minor
+    monitors:
+    - id: late_night_watch
+      observe:
+      - RESIDENT.lights
+      - HOME_ROBOT.presence
+      sampling: periodic(10min)
+      rule: RESIDENT.lights == on AND state == Reminded
+      on_match:
+        violation: lights_out_missed
+        severity: Minor
+  - id: PART_TIME_JOB
+    parties:
+    - RESIDENT
+    - EMPLOYER
+    assume:
+    - shift_start_hour >= 17
+    guarantee:
+    - home_arrival_hour >= 22
+    authority:
+      decision_holder: EMPLOYER
+      beta: 0.9

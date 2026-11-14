@@ -1,0 +1,84 @@
+# DESTINATION, WEAK READING: the three explicit statements that destination_us_utm.cadl encodes as
+# negations (no priority scheme, UVRs do not exclude, the operator de-conflicts) are encoded by their
+# positive content only, so the matters they leave open are unspecified, not negated.
+# DESTINATION: US UAS Traffic Management (UTM), FAA NextGen, UTM Concept of Operations v2.0
+# (3/2/2020; "ConOps", printed page numbers), and 14 CFR Part 89 Remote ID final rule (86 FR 4390).
+# The ConOps is a concept document, not regulation. Each contract states the passage it formalizes.
+sos:
+  name: "US_UTM"
+  type: Collaborative
+  version: "1.0.0"
+  description: "Low-altitude UAS operations below 400 ft AGL supported by a federation of USSs"
+
+  actors:
+    - id: FAA                   # regulator; FAA-originated constraint data   ConOps p.9
+      role: "regulator"
+    - id: OPERATOR              # operator / remote pilot in command          ConOps p.9-10
+      role: "uas_operator"
+    - id: USS                   # "assists UAS Operators"                     ConOps p.11
+      role: "uas_service_supplier"
+    - id: USS_NETWORK           # federation of USSs                          ConOps p.11
+      role: "uss_network"
+    - id: FIMS                  # FAA-managed interface for data exchange     ConOps p.12
+      role: "faa_interface"
+    - id: MANNED_OPERATOR       # voluntary, passive or active participation  ConOps p.14
+      role: "manned_aircraft_operator"
+    - id: ATC                   # no services to UA below 400 ft AGL          ConOps p.4
+      role: "air_traffic_control"
+
+  contracts:
+    # ConOps p.13, 23-24, 26: BVLOS operators share operation intent; VLOS operators are not
+    # required to share intent; fn. 27 p.37: VLOS operators need not strategically de-conflict.
+    - id: PARTICIPATION
+      parties: [FAA, OPERATOR, USS]
+      guarantee:
+        - "bvlos_intent_shared == true"
+        - "vlos_intent_sharing_required == false"
+
+    # ConOps p.14: manned aircraft are "not required to participate in UTM".
+    - id: MANNED_PARTICIPATION
+      parties: [MANNED_OPERATOR, FAA]
+      guarantee:
+        - "manned_participation_required == false"
+
+    # ConOps p.32 (Equity): "no assumption of a priority scheme"; contention is resolved by
+    # operator collaboration and negotiation.
+    - id: EQUITY
+      parties: [FAA, OPERATOR, USS]
+      guarantee:
+        - "operators_negotiate_contention == true"
+
+    # ConOps p.33: "UVRs do not exclude UTM participants from the airspace".
+    - id: UVR
+      parties: [FAA, FIMS, USS, OPERATOR]
+      guarantee:
+        - "participants_exercise_caution_in_uvr == true"
+
+    # ConOps p.11: the USS Network "must implement a shared paradigm" for de-confliction and
+    # negotiation; multiple USSs operate in the same area.
+    - id: USS_NETWORK_PARADIGM
+      parties: [USS, USS_NETWORK]
+      guarantee:
+        - "providers_coordinate_conflicting_requests == true"
+
+    # ConOps p.23 and Scenario V2-1 p.37: the USS checks operation volumes for conflicts and
+    # assists; "the Operator strategically de-conflicts the operation" and negotiates.
+    - id: STRATEGIC_DECONFLICTION
+      parties: [OPERATOR, USS]
+      guarantee:
+        - "OPERATOR.deconflicts_own_operation == true"
+      authority:
+        decision_scope: "strategic_deconfliction"
+        decision_holder: OPERATOR
+
+    # ConOps p.4: ATC does not provide services to UA below 400 ft AGL.
+    - id: ATC_LOW_ALTITUDE
+      parties: [ATC, OPERATOR]
+      guarantee:
+        - "atc_serves_low_altitude_ua == false"
+
+    # 86 FR 4393, 4406: the final rule removed network Remote ID; broadcast only.
+    - id: REMOTE_ID
+      parties: [FAA, OPERATOR]
+      guarantee:
+        - "network_remote_id == false"

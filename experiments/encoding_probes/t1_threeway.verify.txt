@@ -1,0 +1,25 @@
+Verifying: t1_threeway.cadl
+  SoS: ThreeWay
+
+--- Type Check ---
+  [PASS] Type check passed
+
+--- SMT Verification ---
+  [PASS] Contract 'RULE_C' consistency: Assumes and guarantees are jointly satisfiable
+  [PASS] Contract 'DEST_D1' consistency: Assumes and guarantees are jointly satisfiable
+  [PASS] Contract 'DEST_D2' consistency: Assumes and guarantees are jointly satisfiable
+  [PASS] Contract 'RULE_C' assumptions: Assumptions are satisfiable
+  [PASS] Contract 'DEST_D1' assumptions: No assumptions (the contract applies unconditionally)
+  [PASS] Contract 'DEST_D2' assumptions: No assumptions (the contract applies unconditionally)
+  [INFO] Contract 'RULE_C' entailment: Guarantees do not follow from the assumptions alone; they are obligations the parties must meet
+        Counterexample: {'shift_hours': '0', 'rest_hours': '0', 'commute_hours': '0'}
+  [PASS] Contract 'DEST_D1' entailment: No assumes or guarantees to check entailment
+  [PASS] Contract 'DEST_D2' entailment: No assumes or guarantees to check entailment
+  [PASS] Cross-contract 'RULE_C' x 'DEST_D1': Contracts are jointly satisfiable
+  [PASS] Cross-contract 'RULE_C' x 'DEST_D2': Contracts are jointly satisfiable
+  [PASS] Cross-contract 'DEST_D1' x 'DEST_D2': Contracts are jointly satisfiable
+
+--- Deadlock Detection ---
+  (no protocols to analyze)
+
+Verification PASSED: 12/12 checks passed

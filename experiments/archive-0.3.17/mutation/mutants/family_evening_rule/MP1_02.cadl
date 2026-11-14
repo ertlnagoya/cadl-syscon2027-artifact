@@ -1,0 +1,71 @@
+sos:
+  name: FamilyEveningRule
+  type: Collaborative
+  version: 1.0.0
+  extensions:
+  - sos-dsl: 0.1
+  actors:
+  - id: PARENT[1..2]
+    role: parent
+    autonomy: high
+  - id: CHILD
+    role: student
+    autonomy: medium
+  contracts:
+  - id: EVENING_ROUTINE
+    parties:
+    - PARENT[*]
+    - CHILD
+    assume:
+    - home_arrival_hour <= 21
+    guarantee:
+    - lights_out_hour <= 24
+    authority:
+      decision_holder: PARENT[1]
+      beta: 0.8
+    information:
+      alpha: 1.5
+      sharing:
+      - 'CHILD -> PARENT[*] : study_status'
+    responsibilities:
+      PARENT[*]:
+      - remind_at_22
+      CHILD:
+      - finish_homework_before_lights_out
+    incentives:
+      lambda: 0.3
+      rules:
+      - penalty(CHILD, -1) when lights_out_missed
+    lifecycle:
+      states:
+      - Scheduled
+      - Reminded
+      - Done
+      - Missed
+      initial: Scheduled
+      terminal:
+      - Done
+      - Missed
+      transitions:
+      - id: remind
+        from: Scheduled
+        to: Reminded
+        on: 'PARENT[1] -> CHILD : reminder'
+      - id: finish
+        from: Reminded
+        to: Done
+        on: CHILD.lights == off
+        deadline: 2h
+        on_violation:
+          transition: Missed
+          severity: Minor
+    monitors:
+    - id: late_night_watch
+      observe:
+      - CHILD.lights
+      - PARENT[1].presence
+      sampling: periodic(10min)
+      rule: CHILD.lights == on AND state == Reminded
+      on_match:
+        violation: lights_out_missed
+        severity: Minor

@@ -1,0 +1,29 @@
+sos:
+  name: "Sorts"
+  type: Collaborative
+  version: "1.0.0"
+  actors:
+    - id: CENTER
+      role: "center"
+      autonomy: low
+  contracts:
+    - id: RULE_C
+      parties: [CENTER]
+      assume:
+        - "manual_override"
+      guarantee:
+        - "x >= 0"
+    - id: DEST_D
+      parties: [CENTER]
+      guarantee:
+        - "manual_override == 0"
+    - id: DEST_E
+      parties: [CENTER]
+      guarantee:
+        - "lunch_minutes <= 30min"
+    - id: RULE_F
+      parties: [CENTER]
+      assume:
+        - "lunch_minutes >= 45"
+      guarantee:
+        - "y >= 0"

@@ -1,0 +1,2 @@
+14 MN mutants; flagged without mapping 0 ; with mapping 13
+not flagged: {'file': 'alone_adapted.cadl', 'contract': 'EVENING_ROUTINE', 'attribute': 'home_arrival_hour', 'fit_unmapped': '0', 'fit_mapped': 0, 'kind': ''}

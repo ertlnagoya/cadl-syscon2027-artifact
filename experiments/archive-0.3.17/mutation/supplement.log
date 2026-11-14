@@ -1,0 +1,34 @@
+a_sos_robot_delivery.cadl {'MA2': '27/27', 'MA3': '7/7'}
+alone_adapted.cadl {'MA2': '14/14', 'MA3': '3/3'}
+alone_adjusted.cadl {'MA2': '14/14', 'MA3': '3/3'}
+c_sos_taxi_fleet.cadl {'MA2': '29/29', 'MA3': '10/10'}
+family_evening_rule.cadl {'MA2': '11/11', 'MA3': '3/3'}
+household_chores.cadl {'MA2': '11/11', 'MA3': '3/3'}
+iot_data_sharing.cadl {'MA2': '15/15', 'MA3': '6/6'}
+raspimouse_c_sos.cadl {'MA2': '46/46', 'MA3': '16/16'}
+raspimouse_d_sos.cadl {'MA2': '21/21', 'MA3': '8/8'}
+raspimouse_mcp_sos.cadl {'MA2': '34/34', 'MA3': '15/15'}
+robot_delivery.cadl {'MA2': '18/18', 'MA3': '5/5'}
+robot_town.cadl {'MA2': '21/21', 'MA3': '4/4'}
+smart_city_traffic.cadl {'MA2': '18/18', 'MA3': '5/5'}
+sos_dsl_robot_delivery.cadl {'MA2': '21/21', 'MA3': '9/9'}
+supply_chain.cadl {'MA2': '29/29', 'MA3': '9/9'}
+mutants: 435
+Counter({'DETECTED-CHECK': 329, 'NOT-DETECTED': 106})
+| operator | position | mutants | DETECTED-CHECK | DETECTED-VERIFY | WARNING-ONLY | NOT-DETECTED | MASKED | MUTANT-INVALID |
+|---|---|---|---|---|---|---|---|---|
+| MA2 | decision_holder | 23 | 23 | 0 | 0 | 0 | 0 | 0 |
+| MA2 | lifecycle on | 12 | 12 | 0 | 0 | 0 | 0 | 0 |
+| MA2 | monitor observe | 10 | 10 | 0 | 0 | 0 | 0 | 0 |
+| MA2 | parties | 55 | 55 | 0 | 0 | 0 | 0 | 0 |
+| MA2 | protocol step | 124 | 124 | 0 | 0 | 0 | 0 | 0 |
+| MA2 | responsibilities key | 17 | 17 | 0 | 0 | 0 | 0 | 0 |
+| MA2 | sharing | 88 | 88 | 0 | 0 | 0 | 0 | 0 |
+| MA3 | incentives.rules | 31 | 0 | 0 | 0 | 31 | 0 | 0 |
+| MA3 | monitor rule | 7 | 0 | 0 | 0 | 7 | 0 | 0 |
+| MA3 | predicate-form on | 7 | 0 | 0 | 0 | 7 | 0 | 0 |
+| MA3 | protocol postcondition | 12 | 0 | 0 | 0 | 12 | 0 | 0 |
+| MA3 | protocol precondition | 10 | 0 | 0 | 0 | 10 | 0 | 0 |
+| MA3 | protocol trigger | 26 | 0 | 0 | 0 | 26 | 0 | 0 |
+| MA3 | regime transition condition | 4 | 0 | 0 | 0 | 4 | 0 | 0 |
+| MA3 | violation.action | 9 | 0 | 0 | 0 | 9 | 0 | 0 |

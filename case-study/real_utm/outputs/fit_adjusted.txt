@@ -1,0 +1,7 @@
+Fit of contract 'FLIGHT_AUTHORISATION'
+  neighbourhood: PARTICIPATION, MANNED_PARTICIPATION, EQUITY, UVR, USS_NETWORK_PARADIGM, STRATEGIC_DECONFLICTION, ATC_LOW_ALTITUDE, REMOTE_ID
+  [PASS] F1: Every role reference in a resolved position names a declared actor
+  [PASS] F2: Assumptions and guarantees are jointly satisfiable
+  [PASS] F3: Jointly satisfiable with the 8 contract(s) of the neighbourhood
+  [INFO] info: Assumptions the destination's guarantees do not establish (supply them with the rule or in the destination): every_flight_authorised == true; manned_traffic_conspicuous == true
+Verdict: FITS

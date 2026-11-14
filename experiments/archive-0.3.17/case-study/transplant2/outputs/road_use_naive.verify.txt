@@ -1,0 +1,45 @@
+Verifying: road_use_naive.cadl
+  SoS: TaxiFleetRoadUseNaive
+
+--- Type Check ---
+  [ERROR]: Undefined actor 'TOWN_STEWARD' referenced in contract 'ROAD_USE' parties
+  [ERROR]: Undefined actor 'ROBOT' referenced in contract 'ROAD_USE' parties
+  [ERROR]: Undefined actor 'COUNCIL' referenced in contract 'ROAD_USE' parties
+  [ERROR]: Undefined actor 'COUNCIL' referenced in contract 'ROAD_USE' authority
+  [ERROR]: Undefined actor 'ROBOT' referenced in 'on' of the lifecycle transition 'release' of contract 'ROAD_USE' (sender)
+  [ERROR]: Undefined actor 'TOWN_STEWARD' referenced in 'on' of the lifecycle transition 'release' of contract 'ROAD_USE' (receiver)
+  [ERROR]: The monitor 'blocking_guard' of contract 'ROAD_USE' observes 'ROBOT[i].blocking', but 'ROBOT' is not a declared actor (M-1)
+  [ERROR]: Undefined actor 'TOWN_STEWARD' referenced in protocol 'SWITCH' message step sender
+  [ERROR]: Undefined actor 'ROBOT' referenced in protocol 'SWITCH' message step receiver
+  [ERROR]: Undefined actor 'ROBOT' referenced in protocol 'SWITCH' message step sender
+  [ERROR]: Undefined actor 'TOWN_STEWARD' referenced in protocol 'SWITCH' message step receiver
+  [ERROR]: Undefined actor 'TOWN_STEWARD' referenced in protocol 'SWITCH' compute step
+  [FAIL] 12 error(s)
+
+--- SMT Verification ---
+  [PASS] Contract 'RIDE_SERVICE' consistency: Assumes and guarantees are jointly satisfiable
+  [PASS] Contract 'ROAD_SHARING' consistency: Assumes and guarantees are jointly satisfiable
+  [PASS] Contract 'ROAD_USE' consistency: Assumes and guarantees are jointly satisfiable
+  [PASS] Contract 'RIDE_SERVICE' assumptions: Assumptions are satisfiable
+  [PASS] Contract 'ROAD_SHARING' assumptions: Assumptions are satisfiable
+  [PASS] Contract 'ROAD_USE' assumptions: No assumptions (the contract applies unconditionally)
+  [INFO] Contract 'RIDE_SERVICE' entailment: Guarantees do not follow from the assumptions alone; they are obligations the parties must meet
+        Counterexample: {'TAXI_i_fuel': '600001', 'pickup_time': '600001', 'TAXI_i_is_available': 'True'}
+  [INFO] Contract 'ROAD_SHARING' entailment: Guarantees do not follow from the assumptions alone; they are obligations the parties must meet
+        Counterexample: {'road_status_accuracy': '0', 'TAXI_i_sensors_operational': 'True'}
+  [PASS] Contract 'ROAD_USE' entailment: No assumes or guarantees to check entailment
+  [PASS] Cross-contract 'RIDE_SERVICE' x 'ROAD_SHARING': Contracts are jointly satisfiable
+  [PASS] Transition exclusivity: NORMAL -> PEAK_DEMAND vs NORMAL -> INCIDENT_RESPONSE: Transition conditions are mutually exclusive
+  [PASS] Transition exclusivity: PEAK_DEMAND -> NORMAL vs PEAK_DEMAND -> INCIDENT_RESPONSE: Transition conditions are mutually exclusive
+  [FAIL] Regime reachability: Unreachable states: CENTRALIZED, DISTRIBUTED
+  [PASS] Regime dead states: No dead-end states
+  [PASS] Safety invariant: DISTRIBUTED->CENTRALIZED: Safety invariant is satisfiable with transition condition
+
+--- Deadlock Detection ---
+  [PASS] Protocol 'RIDE_MATCHING' deadlock: No circular dependencies found
+  [PASS] Protocol 'CONFLICT_RESOLUTION' deadlock: No circular dependencies found
+  [PASS] Protocol 'INCIDENT_BROADCAST' deadlock: No circular dependencies found
+  [PASS] Protocol 'SWITCH' deadlock: No circular dependencies found
+
+Verification FAILED: 16/18 checks passed
+rc=1

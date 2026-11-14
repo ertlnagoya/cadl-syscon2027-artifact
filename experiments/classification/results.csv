@@ -1,0 +1,18 @@
+case,expected_verdict,verdict,expected_class,class,core,correct,note
+"vacuous, one contract",misfit,misfit,vacuous,vacuous,D,1,
+"vacuous, two contracts jointly",misfit,misfit,vacuous,vacuous,D1;D2,1,
+"vacuous, shared attribute, no shared party",misfit,misfit,vacuous,vacuous,D,1,
+"disabling (rule makes destination contract vacuous; relabelled from vacuous when the class was split, 2026-11-14)",misfit,misfit,disabling,disabling,D,1,
+guarantee conflict,misfit,misfit,guarantee,guarantee,D,1,
+"guarantee conflict, two contracts jointly",misfit,misfit,guarantee,guarantee,D1;D2,1,
+"exclusion, same mode variable",fits,fits,exclusion,exclusion,D,1,
+exclusion with conflicting guarantees (modes),fits,fits,exclusion,exclusion,D,1,
+"modes as two propositions, exclusivity stated",fits,fits,exclusion,exclusion,D,1,
+"modes as two propositions, exclusivity not stated",fits,misfit,exclusion,guarantee,D,0,the encoding cannot know that the modes exclude each other
+"exclusion with D2, guarantee conflict with D1",misfit,misfit,guarantee,guarantee,D1,1,
+two causes: vacuous and guarantee conflict,misfit,misfit,vacuous,vacuous,D,1,first class by order
+other (no single cause),misfit,misfit,other,other,D,1,
+fits,fits,fits,,,,1,
+"destination modes, rule unrelated",fits,fits,exclusion,exclusion,D1;D2,1,two sets in force
+"destination modes, conflict in one mode",misfit,misfit,guarantee,guarantee,D2,1,
+rule inconsistent by itself (F2),misfit,misfit,*,other,,1,F2 fails; F3 then fails too

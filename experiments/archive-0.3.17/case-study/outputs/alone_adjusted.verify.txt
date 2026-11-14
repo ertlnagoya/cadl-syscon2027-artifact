@@ -1,0 +1,22 @@
+Verifying: alone_adjusted.cadl
+  SoS: LivingAloneAdjusted
+
+--- Type Check ---
+  [PASS] Type check passed
+
+--- SMT Verification ---
+  [PASS] Contract 'EVENING_ROUTINE' consistency: Assumes and guarantees are jointly satisfiable
+  [PASS] Contract 'PART_TIME_JOB' consistency: Assumes and guarantees are jointly satisfiable
+  [PASS] Contract 'EVENING_ROUTINE' assumptions: Assumptions are satisfiable
+  [PASS] Contract 'PART_TIME_JOB' assumptions: Assumptions are satisfiable
+  [INFO] Contract 'EVENING_ROUTINE' entailment: Guarantees do not follow from the assumptions alone; they are obligations the parties must meet
+        Counterexample: {'HOME_ROBOT_is_operational': 'True', 'lights_out_hour': '25', 'home_arrival_hour': '23'}
+  [INFO] Contract 'PART_TIME_JOB' entailment: Guarantees do not follow from the assumptions alone; they are obligations the parties must meet
+        Counterexample: {'home_arrival_hour': '0', 'shift_start_hour': '17'}
+  [PASS] Cross-contract 'EVENING_ROUTINE' x 'PART_TIME_JOB': Contracts are jointly satisfiable
+
+--- Deadlock Detection ---
+  (no protocols to analyze)
+
+Verification PASSED: 6/6 checks passed
+rc=0

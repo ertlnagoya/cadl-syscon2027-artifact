@@ -1,0 +1,2 @@
+Type check passed: taxi_destination.cadl
+rc=0

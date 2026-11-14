@@ -1,0 +1,9 @@
+Fit of contract 'RULE_C'
+  neighbourhood: DEST_D
+  [PASS] F1: Every role reference in a resolved position names a declared actor
+  [WARN] encoding: assume 'for all t in TAXI[*]: TAXI[t].fuel >= 10': the quantifier is reduced to its body
+  [PASS] F2: Assumptions and guarantees are jointly satisfiable
+  [PASS] F3: Jointly satisfiable with the 1 contract(s) of the neighbourhood
+  [INFO] info: Assumptions the destination's guarantees do not establish (supply them with the rule or in the destination): for all t in TAXI[*]: TAXI[t].fuel >= 10
+  [UNKNOWN] encoding: Satisfiable only for the translated fragment: 1 predicate(s) were dropped or had a quantifier reduced
+Verdict: UNKNOWN

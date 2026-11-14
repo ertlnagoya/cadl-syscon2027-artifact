@@ -1,0 +1,25 @@
+sos:
+  name: "NoShare"
+  type: Collaborative
+  version: "1.0.0"
+  actors:
+    - id: "TAXI[1..N]"
+      role: "taxi"
+      autonomy: high
+    - id: CENTER
+      role: "center"
+      autonomy: low
+    - id: DEPOT
+      role: "depot"
+      autonomy: low
+  contracts:
+    - id: RULE_C
+      parties: [CENTER]
+      assume:
+        - "network_latency <= 200ms"
+      guarantee:
+        - "route_update_delay <= 100ms"
+    - id: DEST_D
+      parties: [DEPOT]
+      guarantee:
+        - "network_latency >= 1s"

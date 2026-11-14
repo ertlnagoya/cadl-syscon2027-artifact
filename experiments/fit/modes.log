@@ -1,0 +1,10 @@
+{'contracts': 10, 'modes': 2, 'variant': 'fits', 'neighbourhood': 10, 'verdict': 'fits', 'conflicts': 0, 'fit_cpu_s': 0.075, 'loadavg1': 8.3}
+{'contracts': 10, 'modes': 2, 'variant': 'misfit', 'neighbourhood': 10, 'verdict': 'misfit', 'conflicts': 4, 'fit_cpu_s': 0.096, 'loadavg1': 8.3}
+{'contracts': 20, 'modes': 4, 'variant': 'fits', 'neighbourhood': 20, 'verdict': 'fits', 'conflicts': 0, 'fit_cpu_s': 0.183, 'loadavg1': 8.3}
+{'contracts': 20, 'modes': 4, 'variant': 'misfit', 'neighbourhood': 20, 'verdict': 'misfit', 'conflicts': 4, 'fit_cpu_s': 0.209, 'loadavg1': 7.9}
+{'contracts': 50, 'modes': 8, 'variant': 'fits', 'neighbourhood': 50, 'verdict': 'fits', 'conflicts': 0, 'fit_cpu_s': 0.576, 'loadavg1': 7.9}
+{'contracts': 50, 'modes': 8, 'variant': 'misfit', 'neighbourhood': 50, 'verdict': 'misfit', 'conflicts': 6, 'fit_cpu_s': 0.6, 'loadavg1': 7.6}
+{'contracts': 100, 'modes': 16, 'variant': 'fits', 'neighbourhood': 100, 'verdict': 'fits', 'conflicts': 0, 'fit_cpu_s': 1.797, 'loadavg1': 8.8}
+{'contracts': 100, 'modes': 16, 'variant': 'misfit', 'neighbourhood': 100, 'verdict': 'misfit', 'conflicts': 6, 'fit_cpu_s': 1.854, 'loadavg1': 8.0}
+{'contracts': 200, 'modes': 32, 'variant': 'fits', 'neighbourhood': 200, 'verdict': 'fits', 'conflicts': 0, 'fit_cpu_s': 6.06, 'loadavg1': 6.3}
+{'contracts': 200, 'modes': 32, 'variant': 'misfit', 'neighbourhood': 200, 'verdict': 'misfit', 'conflicts': 6, 'fit_cpu_s': 6.244, 'loadavg1': 7.8}

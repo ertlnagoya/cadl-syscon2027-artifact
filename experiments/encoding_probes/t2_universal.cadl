@@ -1,0 +1,25 @@
+sos:
+  name: "Universal"
+  type: Collaborative
+  version: "1.0.0"
+  actors:
+    - id: "TAXI[1..N]"
+      role: "taxi"
+      autonomy: high
+    - id: CENTER
+      role: "center"
+      autonomy: low
+    - id: DEPOT
+      role: "depot"
+      autonomy: low
+  contracts:
+    - id: RULE_C
+      parties: [CENTER, "TAXI[*]"]
+      assume:
+        - "for all t in TAXI[*]: TAXI[t].fuel >= 10"
+      guarantee:
+        - "service_level >= 1"
+    - id: DEST_D
+      parties: ["TAXI[*]"]
+      guarantee:
+        - "TAXI[1].fuel < 5"

@@ -1,0 +1,98 @@
+sos:
+  name: US_UTM
+  type: Collaborative
+  version: 1.0.0
+  description: Low-altitude UAS operations below 400 ft AGL supported by a federation
+    of USSs
+  actors:
+  - id: FAA
+    role: regulator
+  - id: OPERATOR
+    role: uas_operator
+  - id: USS
+    role: uas_service_supplier
+  - id: USS_NETWORK
+    role: uss_network
+  - id: FIMS
+    role: faa_interface
+  - id: MANNED_OPERATOR
+    role: manned_aircraft_operator
+  - id: ATC
+    role: air_traffic_control
+  contracts:
+  - id: PARTICIPATION
+    parties:
+    - FAA
+    - OPERATOR
+    - USS
+    guarantee:
+    - bvlos_intent_shared == true
+    - vlos_intent_sharing_required == false
+  - id: MANNED_PARTICIPATION
+    parties:
+    - MANNED_OPERATOR
+    - FAA
+    guarantee:
+    - manned_participation_required == false
+  - id: EQUITY
+    parties:
+    - FAA
+    - OPERATOR
+    - USS
+    guarantee:
+    - priority_order_defined == false
+  - id: UVR
+    parties:
+    - FAA
+    - FIMS
+    - USS
+    - OPERATOR
+    guarantee:
+    - authorisations_withdrawable_on_restriction == false
+  - id: USS_NETWORK_PARADIGM
+    parties:
+    - USS
+    - USS_NETWORK
+    guarantee:
+    - providers_coordinate_conflicting_requests == true
+  - id: STRATEGIC_DECONFLICTION
+    parties:
+    - OPERATOR
+    - USS
+    guarantee:
+    - USS.rejects_intersecting_requests == false
+    - OPERATOR.deconflicts_own_operation == true
+    authority:
+      decision_scope: strategic_deconfliction
+      decision_holder: OPERATOR
+  - id: ATC_LOW_ALTITUDE
+    parties:
+    - ATC
+    - OPERATOR
+    guarantee:
+    - atc_serves_low_altitude_ua == false
+  - id: REMOTE_ID
+    parties:
+    - FAA
+    - OPERATOR
+    guarantee:
+    - network_remote_id == false
+  - id: FLIGHT_AUTHORISATION
+    parties:
+    - UAS_OPERATOR
+    - USSP
+    assume:
+    - every_flight_authorised == true
+    - manned_traffic_conspicuous == true
+    - priority_order_defined == true
+    - providers_coordinate_conflicting_requests == true
+    - authorisations_withdrawable_on_restriction == true
+    guarantee:
+    - USSP.rejects_intersecting_requests == true
+    - intersecting_authorised_flights == 0
+    authority:
+      decision_scope: flight_authorisation
+      decision_holder: USSP
+    violation:
+      detect: intersecting_authorised_flights > 0
+      action: notify(COMPETENT_AUTHORITY)

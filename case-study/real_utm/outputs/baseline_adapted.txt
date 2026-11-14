@@ -1,0 +1,3 @@
+{'pair': ['EQUITY', 'FLIGHT_AUTHORISATION'], 'ct_consistency': 'sat', 'ct_compatibility': 'sat', 'F3': 'unsat', 'vacuous_c1': False, 'vacuous_c2': True, 'class': 'F3a vacuous'}
+{'pair': ['UVR', 'FLIGHT_AUTHORISATION'], 'ct_consistency': 'sat', 'ct_compatibility': 'sat', 'F3': 'unsat', 'vacuous_c1': False, 'vacuous_c2': True, 'class': 'F3a vacuous'}
+{'pair': ['STRATEGIC_DECONFLICTION', 'FLIGHT_AUTHORISATION'], 'ct_consistency': 'sat', 'ct_compatibility': 'sat', 'F3': 'unsat', 'vacuous_c1': False, 'vacuous_c2': False, 'class': 'F3b guarantee conflict'}

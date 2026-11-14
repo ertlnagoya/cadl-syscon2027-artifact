@@ -1,0 +1,20 @@
+Verifying: t3_exists.cadl
+  SoS: Exists
+
+--- Type Check ---
+  [PASS] Type check passed
+
+--- SMT Verification ---
+  [PASS] Contract 'RULE_C' consistency: Assumes and guarantees are jointly satisfiable
+  [PASS] Contract 'DEST_D' consistency: Assumes and guarantees are jointly satisfiable
+  [PASS] Contract 'RULE_C' assumptions: Assumptions are satisfiable
+  [PASS] Contract 'DEST_D' assumptions: No assumptions (the contract applies unconditionally)
+  [INFO] Contract 'RULE_C' entailment: Guarantees do not follow from the assumptions alone; they are obligations the parties must meet
+        Counterexample: {'TAXI_t_speed': '51', 'service_level': '0'}
+  [PASS] Contract 'DEST_D' entailment: No assumes or guarantees to check entailment
+  [FAIL] Cross-contract 'RULE_C' x 'DEST_D': Contracts are contradictory when combined
+
+--- Deadlock Detection ---
+  (no protocols to analyze)
+
+Verification FAILED: 6/7 checks passed

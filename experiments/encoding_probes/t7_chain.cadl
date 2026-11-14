@@ -1,0 +1,27 @@
+sos:
+  name: "Chain"
+  type: Collaborative
+  version: "1.0.0"
+  actors:
+    - id: CENTER
+      role: "center"
+      autonomy: low
+    - id: DEPOT
+      role: "depot"
+      autonomy: low
+    - id: GARAGE
+      role: "garage"
+      autonomy: low
+  contracts:
+    - id: RULE_C
+      parties: [CENTER]
+      guarantee:
+        - "queue_delay <= 0"
+    - id: DEST_D1
+      parties: [DEPOT]
+      guarantee:
+        - "queue_delay == dispatch_delay"
+    - id: DEST_D2
+      parties: [GARAGE]
+      guarantee:
+        - "dispatch_delay >= 1"

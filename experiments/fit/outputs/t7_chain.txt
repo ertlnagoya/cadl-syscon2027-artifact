@@ -1,0 +1,6 @@
+Fit of contract 'RULE_C'
+  neighbourhood: DEST_D1, DEST_D2
+  [PASS] F1: Every role reference in a resolved position names a declared actor
+  [PASS] F2: Assumptions and guarantees are jointly satisfiable
+  [FAIL] F3 guarantee: The rule's guarantees contradict the destination's guarantees: the rule applies but cannot be met together with them (only jointly: DEST_D1, DEST_D2) [DEST_D1, DEST_D2]
+Verdict: MISFIT

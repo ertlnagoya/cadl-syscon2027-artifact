@@ -1,0 +1,26 @@
+Verifying: delivery_source.cadl
+  SoS: MAPFRobotDelivery
+
+--- Type Check ---
+  [PASS] Type check passed
+
+--- SMT Verification ---
+  [PASS] Contract 'DELIVERY_SLA' consistency: Assumes and guarantees are jointly satisfiable
+  [PASS] Contract 'FLEET_SAFETY' consistency: Assumes and guarantees are jointly satisfiable
+  [PASS] Contract 'DELIVERY_SLA' assumptions: Assumptions are satisfiable
+  [PASS] Contract 'FLEET_SAFETY' assumptions: Assumptions are satisfiable
+  [INFO] Contract 'DELIVERY_SLA' entailment: Guarantees do not follow from the assumptions alone; they are obligations the parties must meet
+        Counterexample: {'ROBOT_i_battery': '300001', 'DISPATCHER_is_operational': 'True', 'delivery_time': '300001'}
+  [INFO] Contract 'FLEET_SAFETY' entailment: Guarantees do not follow from the assumptions alone; they are obligations the parties must meet
+        Counterexample: {'collision_count': '-1', 'DISPATCHER_planner_running': 'True'}
+  [PASS] Cross-contract 'DELIVERY_SLA' x 'FLEET_SAFETY': Contracts are jointly satisfiable
+  [PASS] Transition exclusivity: CONGESTED -> NORMAL vs CONGESTED -> EMERGENCY: Transition conditions are mutually exclusive
+  [PASS] Regime reachability: All states reachable from initial state
+  [PASS] Regime dead states: No dead-end states
+
+--- Deadlock Detection ---
+  [PASS] Protocol 'TASK_DISPATCH' deadlock: No circular dependencies found
+  [PASS] Protocol 'OBSTACLE_REPLAN' deadlock: No circular dependencies found
+  [PASS] Protocol 'EMERGENCY_STOP' deadlock: No circular dependencies found
+
+Verification PASSED: 12/12 checks passed

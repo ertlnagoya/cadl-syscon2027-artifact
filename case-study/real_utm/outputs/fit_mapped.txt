@@ -1,0 +1,8 @@
+Fit of contract 'FLIGHT_AUTHORISATION'
+  neighbourhood: PARTICIPATION, MANNED_PARTICIPATION, EQUITY, UVR, USS_NETWORK_PARADIGM, STRATEGIC_DECONFLICTION, ATC_LOW_ALTITUDE, REMOTE_ID
+  [PASS] F1: Every role reference in a resolved position names a declared actor
+  [PASS] F2: Assumptions and guarantees are jointly satisfiable
+  [FAIL] F3 vacuous: The destination's guarantees exclude the rule's assumption: the rule never applies while these destination contracts are in force [EQUITY]
+  [FAIL] F3 vacuous: The destination's guarantees exclude the rule's assumption: the rule never applies while these destination contracts are in force [UVR]
+  [FAIL] F3 guarantee: The rule's guarantees contradict the destination's guarantees: the rule applies but cannot be met together with them [STRATEGIC_DECONFLICTION]
+Verdict: MISFIT

@@ -1,0 +1,46 @@
+Verifying: source_eu_uspace.cadl
+  SoS: EU_Uspace
+
+--- Type Check ---
+  [PASS] Type check passed
+
+--- SMT Verification ---
+  [PASS] Contract 'MANDATORY_SERVICES' consistency: Assumes and guarantees are jointly satisfiable
+  [PASS] Contract 'E_CONSPICUITY' consistency: Assumes and guarantees are jointly satisfiable
+  [PASS] Contract 'PRIORITY_RULES' consistency: Assumes and guarantees are jointly satisfiable
+  [PASS] Contract 'USSP_COORDINATION' consistency: Assumes and guarantees are jointly satisfiable
+  [PASS] Contract 'DYNAMIC_RECHECK' consistency: Assumes and guarantees are jointly satisfiable
+  [PASS] Contract 'FLIGHT_AUTHORISATION' consistency: Assumes and guarantees are jointly satisfiable
+  [PASS] Contract 'MANDATORY_SERVICES' assumptions: No assumptions (the contract applies unconditionally)
+  [PASS] Contract 'E_CONSPICUITY' assumptions: No assumptions (the contract applies unconditionally)
+  [PASS] Contract 'PRIORITY_RULES' assumptions: No assumptions (the contract applies unconditionally)
+  [PASS] Contract 'USSP_COORDINATION' assumptions: No assumptions (the contract applies unconditionally)
+  [PASS] Contract 'DYNAMIC_RECHECK' assumptions: No assumptions (the contract applies unconditionally)
+  [PASS] Contract 'FLIGHT_AUTHORISATION' assumptions: Assumptions are satisfiable
+  [PASS] Contract 'MANDATORY_SERVICES' entailment: No assumes or guarantees to check entailment
+  [PASS] Contract 'E_CONSPICUITY' entailment: No assumes or guarantees to check entailment
+  [PASS] Contract 'PRIORITY_RULES' entailment: No assumes or guarantees to check entailment
+  [PASS] Contract 'USSP_COORDINATION' entailment: No assumes or guarantees to check entailment
+  [PASS] Contract 'DYNAMIC_RECHECK' entailment: No assumes or guarantees to check entailment
+  [INFO] Contract 'FLIGHT_AUTHORISATION' entailment: Guarantees do not follow from the assumptions alone; they are obligations the parties must meet
+        Counterexample: {'authorisations_withdrawable_on_restriction': 'True', 'manned_traffic_conspicuous': 'True', 'every_flight_authorised': 'True', 'USSP_rejects_intersecting_requests': 'False', 'priority_order_defined': 'True', 'providers_coordinate_conflicting_requests': 'True'}
+  [PASS] Cross-contract 'MANDATORY_SERVICES' x 'E_CONSPICUITY': Contracts are jointly satisfiable
+  [PASS] Cross-contract 'MANDATORY_SERVICES' x 'PRIORITY_RULES': Contracts are jointly satisfiable
+  [PASS] Cross-contract 'MANDATORY_SERVICES' x 'USSP_COORDINATION': Contracts are jointly satisfiable
+  [PASS] Cross-contract 'MANDATORY_SERVICES' x 'DYNAMIC_RECHECK': Contracts are jointly satisfiable
+  [PASS] Cross-contract 'MANDATORY_SERVICES' x 'FLIGHT_AUTHORISATION': Contracts are jointly satisfiable
+  [PASS] Cross-contract 'E_CONSPICUITY' x 'PRIORITY_RULES': Contracts are jointly satisfiable
+  [PASS] Cross-contract 'E_CONSPICUITY' x 'USSP_COORDINATION': Contracts are jointly satisfiable
+  [PASS] Cross-contract 'E_CONSPICUITY' x 'DYNAMIC_RECHECK': Contracts are jointly satisfiable
+  [PASS] Cross-contract 'E_CONSPICUITY' x 'FLIGHT_AUTHORISATION': Contracts are jointly satisfiable
+  [PASS] Cross-contract 'PRIORITY_RULES' x 'USSP_COORDINATION': Contracts are jointly satisfiable
+  [PASS] Cross-contract 'PRIORITY_RULES' x 'DYNAMIC_RECHECK': Contracts are jointly satisfiable
+  [PASS] Cross-contract 'PRIORITY_RULES' x 'FLIGHT_AUTHORISATION': Contracts are jointly satisfiable
+  [PASS] Cross-contract 'USSP_COORDINATION' x 'DYNAMIC_RECHECK': Contracts are jointly satisfiable
+  [PASS] Cross-contract 'USSP_COORDINATION' x 'FLIGHT_AUTHORISATION': Contracts are jointly satisfiable
+  [PASS] Cross-contract 'DYNAMIC_RECHECK' x 'FLIGHT_AUTHORISATION': Contracts are jointly satisfiable
+
+--- Deadlock Detection ---
+  (no protocols to analyze)
+
+Verification PASSED: 33/33 checks passed

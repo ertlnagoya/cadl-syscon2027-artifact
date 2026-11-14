@@ -1,0 +1,6 @@
+Fit of contract 'ROAD_USE'
+  neighbourhood: RIDE_SERVICE, ROAD_SHARING
+  [PASS] F1: Every role reference in a resolved position names a declared actor
+  [PASS] F2: Assumptions and guarantees are jointly satisfiable
+  [FAIL] F3 vacuous: The destination's guarantees exclude the rule's assumption: the rule never applies while these destination contracts are in force [RIDE_SERVICE]
+Verdict: MISFIT

@@ -1,0 +1,7 @@
+Fit of contract 'FLIGHT_AUTHORISATION'
+  neighbourhood: MANDATORY_SERVICES, E_CONSPICUITY, PRIORITY_RULES, USSP_COORDINATION, DYNAMIC_RECHECK
+  [PASS] F1: Every role reference in a resolved position names a declared actor
+  [PASS] F2: Assumptions and guarantees are jointly satisfiable
+  [PASS] F3: Jointly satisfiable with the 5 contract(s) of the neighbourhood
+  [INFO] info: The destination's guarantees establish the rule's assumptions
+Verdict: FITS

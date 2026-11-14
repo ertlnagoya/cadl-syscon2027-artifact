@@ -1,0 +1,43 @@
+Verifying: delivery_sla_naive.cadl
+  SoS: RaspimouseDeliverySLANaive
+
+--- Type Check ---
+  [ERROR]: Undefined actor 'DISPATCHER' referenced in contract 'DELIVERY_SLA' parties
+  [ERROR]: Undefined actor 'CUSTOMER' referenced in contract 'DELIVERY_SLA' parties
+  [ERROR]: Undefined actor 'DISPATCHER' referenced in contract 'DELIVERY_SLA' assume
+  [ERROR]: Undefined actor 'DISPATCHER' referenced in contract 'DELIVERY_SLA' authority
+  [ERROR]: Undefined actor 'DISPATCHER' referenced in contract 'DELIVERY_SLA' information views
+  [ERROR]: Undefined actor 'CUSTOMER' referenced in contract 'DELIVERY_SLA' information views
+  [ERROR]: Undefined actor 'DISPATCHER' referenced in contract 'DELIVERY_SLA' information sharing
+  [ERROR]: Undefined actor 'DISPATCHER' referenced in contract 'DELIVERY_SLA' information sharing
+  [ERROR]: Undefined actor 'DISPATCHER' referenced in contract 'DELIVERY_SLA' information sharing
+  [ERROR]: Undefined actor 'CUSTOMER' referenced in contract 'DELIVERY_SLA' information sharing
+  [FAIL] 10 error(s)
+
+--- SMT Verification ---
+  [PASS] Contract 'ROUTE_VERIFICATION' consistency: Assumes and guarantees are jointly satisfiable
+  [PASS] Contract 'DELIVERY_ASSIGNMENT_CONTRACT' consistency: Assumes and guarantees are jointly satisfiable
+  [PASS] Contract 'DELIVERY_SLA' consistency: Assumes and guarantees are jointly satisfiable
+  [PASS] Contract 'ROUTE_VERIFICATION' assumptions: Assumptions are satisfiable
+  [PASS] Contract 'DELIVERY_ASSIGNMENT_CONTRACT' assumptions: Assumptions are satisfiable
+  [PASS] Contract 'DELIVERY_SLA' assumptions: Assumptions are satisfiable
+  [INFO] Contract 'ROUTE_VERIFICATION' entailment: Guarantees do not follow from the assumptions alone; they are obligations the parties must meet
+        Counterexample: {'no_head_on_collision': 'False', 'ROBOT_i_local_graph': '2', 'ARBITRATOR_global_graph': '2', 'ARBITRATOR_is_operational': 'True'}
+  [INFO] Contract 'DELIVERY_ASSIGNMENT_CONTRACT' entailment: Guarantees do not follow from the assumptions alone; they are obligations the parties must meet
+        Counterexample: {'TASK_OWNER_is_operational': 'True', 'each_goal_assigned_to_exactly_one_robot': 'False', 'active_robot_count': '1', 'pred_goal_sequence_is_nonempty': 'True'}
+  [INFO] Contract 'DELIVERY_SLA' entailment: Guarantees do not follow from the assumptions alone; they are obligations the parties must meet
+        Counterexample: {'ROBOT_i_battery': '300001', 'DISPATCHER_is_operational': 'True', 'delivery_time': '300001'}
+  [PASS] Cross-contract 'ROUTE_VERIFICATION' x 'DELIVERY_ASSIGNMENT_CONTRACT': Contracts are jointly satisfiable
+  [PASS] Cross-contract 'ROUTE_VERIFICATION' x 'DELIVERY_SLA': Contracts are jointly satisfiable
+  [PASS] Cross-contract 'DELIVERY_ASSIGNMENT_CONTRACT' x 'DELIVERY_SLA': Contracts are jointly satisfiable
+  [PASS] Regime reachability: All states reachable from initial state
+  [PASS] Regime dead states: No dead-end states
+
+--- Deadlock Detection ---
+  [PASS] Protocol 'COLLABORATIVE_ROUTING' deadlock: No circular dependencies found
+  [PASS] Protocol 'RESOURCE_QUERY' deadlock: No circular dependencies found
+  [PASS] Protocol 'COLLISION_RECOVERY' deadlock: No circular dependencies found
+  [PASS] Protocol 'DELIVERY_ASSIGNMENT' deadlock: No circular dependencies found
+  [PASS] Protocol 'RETIREMENT' deadlock: No circular dependencies found
+
+Verification FAILED: 16/17 checks passed

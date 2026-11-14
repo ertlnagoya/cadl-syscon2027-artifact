@@ -1,0 +1,73 @@
+a_sos_robot_delivery.cadl {'MA1': '3/3', 'MA2': '10/27', 'MA3': '7/7', 'MC1': '2/2', 'MC2': '2/2', 'MC3': '1/1', 'MC4': '1/1', 'MR1': '1/1', 'MR2': '3/3', 'MR3': '1/1', 'MP1': '5/5', 'MD1': '3/3'}
+alone_adapted.cadl {'MA1': '3/3', 'MA2': '10/14', 'MA3': '3/3', 'MC1': '2/2', 'MC2': '2/2', 'MC3': '1/1', 'MC4': '1/1', 'ML1': '2/2', 'ML2': '4/4', 'ML3': '1/1', 'ML4': '1/1', 'ML5': '1/1', 'ML6': '1/1', 'MP1': '4/4'}
+alone_adjusted.cadl {'MA1': '3/3', 'MA2': '10/14', 'MA3': '3/3', 'MC1': '2/2', 'MC2': '2/2', 'MC3': '1/1', 'MC4': '1/1', 'ML1': '2/2', 'ML2': '4/4', 'ML3': '1/1', 'ML4': '1/1', 'ML5': '1/1', 'ML6': '1/1', 'MP1': '4/4'}
+c_sos_taxi_fleet.cadl {'MA1': '3/3', 'MA2': '10/29', 'MA3': '10/10', 'MC1': '2/2', 'MC2': '2/2', 'MC3': '1/1', 'MC4': '1/1', 'MR1': '2/2', 'MR2': '3/3', 'MR3': '1/1', 'MP1': '6/6', 'MD1': '3/3'}
+family_evening_rule.cadl {'MA1': '2/2', 'MA2': '10/11', 'MA3': '3/3', 'MC1': '1/1', 'MC2': '1/1', 'ML1': '2/2', 'ML2': '4/4', 'ML3': '1/1', 'ML4': '1/1', 'ML5': '1/1', 'ML6': '1/1', 'MP1': '3/3'}
+household_chores.cadl {'MA1': '2/2', 'MA2': '10/11', 'MA3': '3/3', 'MC1': '1/1', 'MC2': '1/1', 'MP1': '3/3', 'MD1': '2/2'}
+iot_data_sharing.cadl {'MA1': '3/3', 'MA2': '10/15', 'MA3': '6/6', 'MC1': '2/2', 'MC2': '2/2', 'MC3': '1/1', 'MC4': '1/1', 'MP1': '4/4', 'MD1': '2/2'}
+raspimouse_c_sos.cadl {'MA1': '3/3', 'MA2': '10/46', 'MA3': '10/16', 'MC1': '2/2', 'MC2': '2/2', 'MC3': '1/1', 'MC4': '1/1', 'MR2': '2/2', 'MR3': '1/1', 'MP1': '6/6', 'MD1': '5/5'}
+raspimouse_d_sos.cadl {'MA1': '2/2', 'MA2': '10/21', 'MA3': '8/8', 'MC1': '1/1', 'MC2': '1/1', 'MR2': '2/2', 'MR3': '1/1', 'MP1': '3/3', 'MD1': '3/3'}
+raspimouse_mcp_sos.cadl {'MA1': '3/3', 'MA2': '10/34', 'MA3': '10/15', 'MC1': '2/2', 'MC2': '2/2', 'MC3': '1/1', 'MC4': '1/1', 'MR1': '1/1', 'MR2': '3/3', 'MR3': '1/1', 'MP1': '5/5', 'MD1': '3/3'}
+robot_delivery.cadl {'MA1': '3/3', 'MA2': '10/18', 'MA3': '5/5', 'MC1': '1/1', 'MC2': '1/1', 'MR2': '2/2', 'MR3': '1/1', 'MP1': '3/3', 'MD1': '1/1'}
+robot_town.cadl {'MA1': '3/3', 'MA2': '10/21', 'MA3': '4/4', 'MC1': '2/2', 'MC3': '1/1', 'MC4': '1/1', 'MR2': '2/2', 'MR3': '1/1', 'ML1': '3/3', 'ML2': '6/6', 'ML3': '2/2', 'ML4': '2/2', 'ML5': '1/1', 'ML6': '1/1', 'MP1': '3/3', 'MD1': '2/2'}
+smart_city_traffic.cadl {'MA1': '3/3', 'MA2': '10/18', 'MA3': '5/5', 'MC1': '2/2', 'MC2': '2/2', 'MC3': '1/1', 'MC4': '1/1', 'MR1': '3/3', 'MR2': '3/3', 'MR3': '1/1', 'MP1': '4/4', 'MD1': '2/2'}
+sos_dsl_robot_delivery.cadl {'MA1': '3/3', 'MA2': '10/21', 'MA3': '9/9', 'MC1': '1/1', 'MC2': '1/1', 'ML1': '5/5', 'ML2': '10/10', 'ML3': '1/1', 'ML4': '1/1', 'ML5': '3/3', 'ML6': '3/3', 'MP1': '3/3', 'MD1': '1/1'}
+supply_chain.cadl {'MA1': '4/4', 'MA2': '10/29', 'MA3': '9/9', 'MC1': '2/2', 'MC2': '2/2', 'MC3': '1/1', 'MC4': '1/1', 'MR1': '1/1', 'MR2': '4/4', 'MR3': '1/1', 'MP1': '6/6', 'MD1': '2/2'}
+mutants: 556
+Counter({'DETECTED-CHECK': 323, 'DETECTED-VERIFY': 127, 'NOT-DETECTED': 104, 'MASKED': 2})
+| operator | applicable_files | mutants | detected_check | detected_verify | warning_only | not_detected | masked | invalid | detected_on_target | detection_rate |
+|---|---|---|---|---|---|---|---|---|---|---|
+| MA1 | 15 | 43 | 43 | 0 | 0 | 0 | 0 | 0 | 43 | 1.000 |
+| MA2 | 15 | 150 | 150 | 0 | 0 | 0 | 0 | 0 | 150 | 1.000 |
+| MA3 | 15 | 95 | 0 | 0 | 0 | 95 | 0 | 0 | 0 | 0.000 |
+| MC1 | 15 | 25 | 0 | 25 | 0 | 0 | 0 | 0 | 25 | 1.000 |
+| MC2 | 14 | 23 | 0 | 23 | 0 | 0 | 0 | 0 | 23 | 1.000 |
+| MC3 | 10 | 10 | 0 | 9 | 0 | 0 | 1 | 0 | 9 | 0.900 |
+| MC4 | 10 | 10 | 0 | 0 | 0 | 9 | 1 | 0 | 0 | 0.000 |
+| MC5 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | n/a |
+| MR1 | 5 | 8 | 0 | 8 | 0 | 0 | 0 | 0 | 8 | 1.000 |
+| MR2 | 9 | 24 | 0 | 24 | 0 | 0 | 0 | 0 | 24 | 1.000 |
+| MR3 | 9 | 9 | 0 | 9 | 0 | 0 | 0 | 0 | 9 | 1.000 |
+| ML1 | 5 | 14 | 14 | 0 | 0 | 0 | 0 | 0 | 14 | 1.000 |
+| ML2 | 5 | 28 | 28 | 0 | 0 | 0 | 0 | 0 | 28 | 1.000 |
+| ML3 | 5 | 6 | 6 | 0 | 0 | 0 | 0 | 0 | 6 | 1.000 |
+| ML4 | 5 | 6 | 6 | 0 | 0 | 0 | 0 | 0 | 6 | 1.000 |
+| ML5 | 5 | 7 | 7 | 0 | 0 | 0 | 0 | 0 | 7 | 1.000 |
+| ML6 | 5 | 7 | 7 | 0 | 0 | 0 | 0 | 0 | 7 | 1.000 |
+| MP1 | 15 | 62 | 62 | 0 | 0 | 0 | 0 | 0 | 62 | 1.000 |
+| MD1 | 12 | 29 | 0 | 29 | 0 | 0 | 0 | 0 | 29 | 1.000 |
+| ALL |  | 556 | 323 | 127 | 0 | 104 | 2 | 0 | 450 | 0.809 |
+a_sos_robot_delivery.cadl {'MA2': '27/27', 'MA3': '7/7'}
+alone_adapted.cadl {'MA2': '14/14', 'MA3': '3/3'}
+alone_adjusted.cadl {'MA2': '14/14', 'MA3': '3/3'}
+c_sos_taxi_fleet.cadl {'MA2': '29/29', 'MA3': '10/10'}
+family_evening_rule.cadl {'MA2': '11/11', 'MA3': '3/3'}
+household_chores.cadl {'MA2': '11/11', 'MA3': '3/3'}
+iot_data_sharing.cadl {'MA2': '15/15', 'MA3': '6/6'}
+raspimouse_c_sos.cadl {'MA2': '46/46', 'MA3': '16/16'}
+raspimouse_d_sos.cadl {'MA2': '21/21', 'MA3': '8/8'}
+raspimouse_mcp_sos.cadl {'MA2': '34/34', 'MA3': '15/15'}
+robot_delivery.cadl {'MA2': '18/18', 'MA3': '5/5'}
+robot_town.cadl {'MA2': '21/21', 'MA3': '4/4'}
+smart_city_traffic.cadl {'MA2': '18/18', 'MA3': '5/5'}
+sos_dsl_robot_delivery.cadl {'MA2': '21/21', 'MA3': '9/9'}
+supply_chain.cadl {'MA2': '29/29', 'MA3': '9/9'}
+mutants: 435
+Counter({'DETECTED-CHECK': 329, 'NOT-DETECTED': 106})
+| operator | position | mutants | DETECTED-CHECK | DETECTED-VERIFY | WARNING-ONLY | NOT-DETECTED | MASKED | MUTANT-INVALID |
+|---|---|---|---|---|---|---|---|---|
+| MA2 | decision_holder | 23 | 23 | 0 | 0 | 0 | 0 | 0 |
+| MA2 | lifecycle on | 12 | 12 | 0 | 0 | 0 | 0 | 0 |
+| MA2 | monitor observe | 10 | 10 | 0 | 0 | 0 | 0 | 0 |
+| MA2 | parties | 55 | 55 | 0 | 0 | 0 | 0 | 0 |
+| MA2 | protocol step | 124 | 124 | 0 | 0 | 0 | 0 | 0 |
+| MA2 | responsibilities key | 17 | 17 | 0 | 0 | 0 | 0 | 0 |
+| MA2 | sharing | 88 | 88 | 0 | 0 | 0 | 0 | 0 |
+| MA3 | incentives.rules | 31 | 0 | 0 | 0 | 31 | 0 | 0 |
+| MA3 | monitor rule | 7 | 0 | 0 | 0 | 7 | 0 | 0 |
+| MA3 | predicate-form on | 7 | 0 | 0 | 0 | 7 | 0 | 0 |
+| MA3 | protocol postcondition | 12 | 0 | 0 | 0 | 12 | 0 | 0 |
+| MA3 | protocol precondition | 10 | 0 | 0 | 0 | 10 | 0 | 0 |
+| MA3 | protocol trigger | 26 | 0 | 0 | 0 | 26 | 0 | 0 |
+| MA3 | regime transition condition | 4 | 0 | 0 | 0 | 4 | 0 | 0 |
+| MA3 | violation.action | 9 | 0 | 0 | 0 | 9 | 0 | 0 |

@@ -1,0 +1,7 @@
+Fit of contract 'DELIVERY_SLA'
+  neighbourhood: ROUTE_VERIFICATION, DELIVERY_ASSIGNMENT_CONTRACT, CLAIM_TIMEOUT
+  [PASS] F1: Every role reference in a resolved position names a declared actor
+  [PASS] F2: Assumptions and guarantees are jointly satisfiable
+  [PASS] F3: Jointly satisfiable with the 3 contract(s) of the neighbourhood
+  [INFO] info: Assumptions the destination's guarantees do not establish (supply them with the rule or in the destination): ARBITRATOR.is_operational == true; ROBOT[i].battery > 20; first_free_robot_takes_goal_at_once(); assignment_latency <= 7s
+Verdict: FITS

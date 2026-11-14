@@ -1,0 +1,7 @@
+Fit of contract 'RULE_C'
+  neighbourhood: DEST_D, DEST_E, RULE_F
+  [PASS] F1: Every role reference in a resolved position names a declared actor
+  [PASS] F2: Assumptions and guarantees are jointly satisfiable
+  [PASS] F3: Jointly satisfiable with the 3 contract(s) of the neighbourhood
+  [INFO] info: Assumptions the destination's guarantees do not establish (supply them with the rule or in the destination): manual_override
+Verdict: FITS

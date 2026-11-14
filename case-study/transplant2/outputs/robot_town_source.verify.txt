@@ -1,0 +1,23 @@
+Verifying: robot_town_source.cadl
+  SoS: RobotTown
+
+--- Type Check ---
+  [PASS] Type check passed
+
+--- SMT Verification ---
+  [PASS] Contract 'DELIVERY_SLA' consistency: Assumes and guarantees are jointly satisfiable
+  [PASS] Contract 'ROAD_USE' consistency: Assumes and guarantees are jointly satisfiable
+  [PASS] Contract 'DELIVERY_SLA' assumptions: No assumptions (the contract applies unconditionally)
+  [PASS] Contract 'ROAD_USE' assumptions: No assumptions (the contract applies unconditionally)
+  [PASS] Contract 'DELIVERY_SLA' entailment: No assumes or guarantees to check entailment
+  [PASS] Contract 'ROAD_USE' entailment: No assumes or guarantees to check entailment
+  [PASS] Cross-contract 'DELIVERY_SLA' x 'ROAD_USE': Contracts are jointly satisfiable
+  [PASS] Regime reachability: All states reachable from initial state
+  [PASS] Regime dead states: No dead-end states
+  [PASS] Safety invariant: DISTRIBUTED->CENTRALIZED: Safety invariant is satisfiable with transition condition
+
+--- Deadlock Detection ---
+  [PASS] Protocol 'SWITCH' deadlock: No circular dependencies found
+  [PASS] Protocol 'AMEND' deadlock: No circular dependencies found
+
+Verification PASSED: 13/13 checks passed

@@ -1,0 +1,2 @@
+Type check passed: probe_own_vocabulary_precondition.cadl
+rc=0

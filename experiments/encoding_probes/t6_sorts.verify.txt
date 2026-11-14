@@ -1,0 +1,32 @@
+Verifying: t6_sorts.cadl
+  SoS: Sorts
+
+--- Type Check ---
+  [PASS] Type check passed
+
+--- SMT Verification ---
+  [PASS] Contract 'RULE_C' consistency: Assumes and guarantees are jointly satisfiable
+  [PASS] Contract 'DEST_D' consistency: Assumes and guarantees are jointly satisfiable
+  [PASS] Contract 'DEST_E' consistency: Assumes and guarantees are jointly satisfiable
+  [PASS] Contract 'RULE_F' consistency: Assumes and guarantees are jointly satisfiable
+  [PASS] Contract 'RULE_C' assumptions: Assumptions are satisfiable
+  [PASS] Contract 'DEST_D' assumptions: No assumptions (the contract applies unconditionally)
+  [PASS] Contract 'DEST_E' assumptions: No assumptions (the contract applies unconditionally)
+  [PASS] Contract 'RULE_F' assumptions: Assumptions are satisfiable
+  [INFO] Contract 'RULE_C' entailment: Guarantees do not follow from the assumptions alone; they are obligations the parties must meet
+        Counterexample: {'manual_override': 'True', 'x': '-1'}
+  [PASS] Contract 'DEST_D' entailment: No assumes or guarantees to check entailment
+  [PASS] Contract 'DEST_E' entailment: No assumes or guarantees to check entailment
+  [INFO] Contract 'RULE_F' entailment: Guarantees do not follow from the assumptions alone; they are obligations the parties must meet
+        Counterexample: {'lunch_minutes': '45', 'y': '-1'}
+  [PASS] Cross-contract 'RULE_C' x 'DEST_D': Contracts are jointly satisfiable
+  [PASS] Cross-contract 'RULE_C' x 'DEST_E': Contracts are jointly satisfiable
+  [PASS] Cross-contract 'RULE_C' x 'RULE_F': Contracts are jointly satisfiable
+  [PASS] Cross-contract 'DEST_D' x 'DEST_E': Contracts are jointly satisfiable
+  [PASS] Cross-contract 'DEST_D' x 'RULE_F': Contracts are jointly satisfiable
+  [PASS] Cross-contract 'DEST_E' x 'RULE_F': Contracts are jointly satisfiable
+
+--- Deadlock Detection ---
+  (no protocols to analyze)
+
+Verification PASSED: 17/17 checks passed

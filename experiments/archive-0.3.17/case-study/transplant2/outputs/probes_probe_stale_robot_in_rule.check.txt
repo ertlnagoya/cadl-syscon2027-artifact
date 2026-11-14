@@ -1,0 +1,2 @@
+Type check passed: probe_stale_robot_in_rule.cadl
+rc=0

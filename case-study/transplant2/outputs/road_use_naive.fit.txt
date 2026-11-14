@@ -1,0 +1,14 @@
+Fit of contract 'ROAD_USE'
+  neighbourhood: (none)
+  [FAIL] F1: Undefined actor 'TOWN_STEWARD' referenced in contract 'ROAD_USE' parties
+  [FAIL] F1: Undefined actor 'ROBOT' referenced in contract 'ROAD_USE' parties
+  [FAIL] F1: Undefined actor 'COUNCIL' referenced in contract 'ROAD_USE' parties
+  [FAIL] F1: Undefined actor 'COUNCIL' referenced in contract 'ROAD_USE' authority
+  [FAIL] F1: Undefined actor 'ROBOT' referenced in 'on' of the lifecycle transition 'release' of contract 'ROAD_USE' (sender)
+  [FAIL] F1: Undefined actor 'TOWN_STEWARD' referenced in 'on' of the lifecycle transition 'release' of contract 'ROAD_USE' (receiver)
+  [FAIL] F1: The monitor 'blocking_guard' of contract 'ROAD_USE' observes 'ROBOT[i].blocking', but 'ROBOT' is not a declared actor (M-1)
+  [INFO] info: 5 type error(s) elsewhere in the description; run cadl check
+  [WARN] review: Names in unresolved positions that are not declared actors: ROBOT (rules, guards, violation, incentives)
+  [PASS] F2: Assumptions and guarantees are jointly satisfiable
+  [PASS] F3: No destination contract shares a party or a variable
+Verdict: MISFIT

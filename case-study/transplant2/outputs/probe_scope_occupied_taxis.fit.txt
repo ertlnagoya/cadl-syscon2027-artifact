@@ -1,0 +1,7 @@
+Fit of contract 'ROAD_USE'
+  neighbourhood: RIDE_SERVICE, ROAD_SHARING
+  [PASS] F1: Every role reference in a resolved position names a declared actor
+  [PASS] F2: Assumptions and guarantees are jointly satisfiable
+  [WARN] F3 exclusion: The assumptions exclude each other: the contracts govern disjoint situations (need not be a defect) [RIDE_SERVICE]
+  [INFO] info: Assumptions the destination's guarantees do not establish (supply them with the rule or in the destination): TAXI[i].is_available == false; pickup_time >= rank_drive_time; rank_drive_time <= 300s; rank_capacity >= idle_taxis
+Verdict: FITS

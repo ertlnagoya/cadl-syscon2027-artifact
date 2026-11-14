@@ -1,0 +1,173 @@
+sos:
+  name: RobotTown
+  type: Collaborative
+  version: 1.0.0
+  context:
+    environment:
+      num_robots: 6
+      num_companies: 3
+      time_step_ms: 1000
+  actors:
+  - id: TOWN_STEWARD
+    role: road_steward
+    autonomy: low
+    capabilities:
+    - assign_order
+    - record_violation
+    - evict
+    interface:
+      input:
+      - order_request
+      - position_report
+      - node_released
+      - rule_update
+      output:
+      - order_assignment
+      - eviction_notice
+      - regime_notice
+      - violation_report
+  - id: ROBOT[1..N]
+    role: delivery_robot
+    autonomy: high
+    capabilities:
+    - move
+    - park
+    - pickup
+    - dropoff
+    interface:
+      input:
+      - order_assignment
+      - eviction_notice
+      - regime_notice
+      - amendment_proposal
+      output:
+      - position_report
+      - node_released
+      - ballot
+  - id: COUNCIL
+    role: rule_amendment_body
+    autonomy: medium
+    capabilities:
+    - propose_amendment
+    - tally_ballots
+    interface:
+      input:
+      - violation_report
+      - ballot
+      output:
+      - amendment_proposal
+      - rule_update
+  contracts:
+  - id: DELIVERY_SLA
+    parties:
+    - TOWN_STEWARD
+    - ROBOT[*]
+    guarantee:
+    - pickup_time <= 120s
+    - dropoff_time <= 120s
+    lifecycle:
+      states:
+      - Assigned
+      - PickedUp
+      - Delivered
+      - Late
+      initial: Assigned
+      terminal:
+      - Delivered
+      - Late
+      transitions:
+      - id: pickup
+        from: Assigned
+        to: PickedUp
+        on: ROBOT[i].status == PickedUp
+        deadline: 120s
+        on_violation:
+          transition: Late
+          severity: Major
+      - id: dropoff
+        from: PickedUp
+        to: Delivered
+        on: ROBOT[i].status == Delivered
+        deadline: 120s
+        on_violation:
+          transition: Late
+          severity: Major
+  - id: ROAD_USE
+    parties:
+    - TOWN_STEWARD
+    - ROBOT[*]
+    - COUNCIL
+    guarantee:
+    - hold_time <= hold_limit
+    authority:
+      decision_holder: COUNCIL
+      beta: 0.5
+      mode: collective
+    information:
+      alpha: 1.0
+    incentives:
+      type: sanction
+      lambda: 0.5
+      rules:
+      - penalty(ROBOT[i], lambda) when overstay
+    lifecycle:
+      states:
+      - Holding
+      - Overstay
+      - Released
+      - Evicted
+      initial: Holding
+      terminal:
+      - Released
+      - Evicted
+      transitions:
+      - id: release
+        from:
+        - Holding
+        - Overstay
+        to: Released
+        on: 'ROBOT[i] -> TOWN_STEWARD : node_released'
+        deadline: 60s
+        on_violation:
+          transition: Overstay
+          severity: Minor
+    monitors:
+    - id: blocking_guard
+      observe: ROBOT[i].blocking
+      sampling: periodic(1000ms)
+      rule: ROBOT.blocking >= 3 AND state IN [Holding, Overstay]
+      on_match:
+        transition: Evicted
+        severity: Major
+  transitions:
+  - from: DISTRIBUTED
+    to: CENTRALIZED
+    condition: orders_in_window < 22
+    protocol: SWITCH
+    safety_invariant: robots_on_road == 0
+  - from: CENTRALIZED
+    to: DISTRIBUTED
+    condition: orders_in_window >= 26
+    protocol: SWITCH
+  protocols:
+  - id: SWITCH
+    trigger: regime_condition_holds
+    steps:
+    - 'TOWN_STEWARD -> ROBOT[*] : regime_notice'
+    - 'ROBOT[*] -> TOWN_STEWARD : node_released'
+    - 'TOWN_STEWARD : activate_regime'
+  - id: AMEND
+    trigger: period_end
+    steps:
+    - 'TOWN_STEWARD -> COUNCIL : violation_report'
+    - 'COUNCIL -> ROBOT[*] : amendment_proposal'
+    - 'ROBOT[*] -> COUNCIL : ballot'
+    - 'COUNCIL : tally_ballots'
+    - 'GHOST -> TOWN_STEWARD : rule_update'
+  metrics:
+  - id: on_time_deliveries
+    formula: count(Delivered)
+    target: '>= 0.9 * count(orders)'
+  - id: blocked_time
+    formula: sum(blocked_robot_seconds)
+    target: <= 600s

@@ -1,0 +1,25 @@
+sos:
+  name: "Index"
+  type: Collaborative
+  version: "1.0.0"
+  actors:
+    - id: "TAXI[1..N]"
+      role: "taxi"
+      autonomy: high
+    - id: CENTER
+      role: "center"
+      autonomy: low
+    - id: DEPOT
+      role: "depot"
+      autonomy: low
+  contracts:
+    - id: RULE_C
+      parties: [CENTER, "TAXI[*]"]
+      assume:
+        - "TAXI[i].passengers == 0"
+      guarantee:
+        - "TAXI[i].returns_to_depot"
+    - id: DEST_D
+      parties: ["TAXI[*]"]
+      guarantee:
+        - "TAXI[i].passengers >= 1"

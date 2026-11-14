@@ -1,0 +1,17 @@
+Verifying: family_evening_rule.cadl
+  SoS: FamilyEveningRule
+
+--- Type Check ---
+  [PASS] Type check passed
+
+--- SMT Verification ---
+  [PASS] Contract 'EVENING_ROUTINE' consistency: Assumes and guarantees are jointly satisfiable
+  [PASS] Contract 'EVENING_ROUTINE' assumptions: Assumptions are satisfiable
+  [INFO] Contract 'EVENING_ROUTINE' entailment: Guarantees do not follow from the assumptions alone; they are obligations the parties must meet
+        Counterexample: {'lights_out_hour': '25', 'home_arrival_hour': '0'}
+
+--- Deadlock Detection ---
+  (no protocols to analyze)
+
+Verification PASSED: 3/3 checks passed
+rc=0

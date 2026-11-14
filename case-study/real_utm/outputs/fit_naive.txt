@@ -1,0 +1,11 @@
+Fit of contract 'FLIGHT_AUTHORISATION'
+  neighbourhood: PARTICIPATION, MANNED_PARTICIPATION, EQUITY, UVR, USS_NETWORK_PARADIGM, STRATEGIC_DECONFLICTION, ATC_LOW_ALTITUDE, REMOTE_ID
+  [FAIL] F1: Undefined actor 'UAS_OPERATOR' referenced in contract 'FLIGHT_AUTHORISATION' parties
+  [FAIL] F1: Undefined actor 'USSP' referenced in contract 'FLIGHT_AUTHORISATION' parties
+  [FAIL] F1: Undefined actor 'USSP' referenced in contract 'FLIGHT_AUTHORISATION' guarantee
+  [FAIL] F1: Undefined actor 'USSP' referenced in contract 'FLIGHT_AUTHORISATION' authority
+  [WARN] review: Names in unresolved positions that are not declared actors: COMPETENT_AUTHORITY (rules, guards, violation, incentives)
+  [PASS] F2: Assumptions and guarantees are jointly satisfiable
+  [FAIL] F3 vacuous: The destination's guarantees exclude the rule's assumption: the rule never applies while these destination contracts are in force [EQUITY]
+  [FAIL] F3 vacuous: The destination's guarantees exclude the rule's assumption: the rule never applies while these destination contracts are in force [UVR]
+Verdict: MISFIT

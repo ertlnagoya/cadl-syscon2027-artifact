@@ -1,0 +1,10 @@
+{'topology': 'star', 'contracts': 10, 'neighbourhood': 9, 'verdict': 'fits', 'fit_cpu_s': 0.12167499999999998, 'parse_typecheck_cpu_s': 0.08713700000000002, 'loadavg1': 7.7509765625}
+{'topology': 'star', 'contracts': 25, 'neighbourhood': 24, 'verdict': 'fits', 'fit_cpu_s': 0.2912509999999999, 'parse_typecheck_cpu_s': 0.22702800000000023, 'loadavg1': 7.6103515625}
+{'topology': 'star', 'contracts': 50, 'neighbourhood': 49, 'verdict': 'fits', 'fit_cpu_s': 0.5770779999999998, 'parse_typecheck_cpu_s': 0.43659099999999995, 'loadavg1': 7.16064453125}
+{'topology': 'star', 'contracts': 100, 'neighbourhood': 99, 'verdict': 'fits', 'fit_cpu_s': 1.1518360000000012, 'parse_typecheck_cpu_s': 0.8841820000000027, 'loadavg1': 6.67431640625}
+{'topology': 'star', 'contracts': 200, 'neighbourhood': 199, 'verdict': 'fits', 'fit_cpu_s': 2.290647, 'parse_typecheck_cpu_s': 1.7691809999999961, 'loadavg1': 6.12353515625}
+{'topology': 'chain', 'contracts': 10, 'neighbourhood': 9, 'verdict': 'fits', 'fit_cpu_s': 0.12025500000000022, 'parse_typecheck_cpu_s': 0.08652200000000221, 'loadavg1': 5.712890625}
+{'topology': 'chain', 'contracts': 25, 'neighbourhood': 24, 'verdict': 'fits', 'fit_cpu_s': 0.2988810000000015, 'parse_typecheck_cpu_s': 0.21617799999999932, 'loadavg1': 5.712890625}
+{'topology': 'chain', 'contracts': 50, 'neighbourhood': 49, 'verdict': 'fits', 'fit_cpu_s': 0.5738770000000031, 'parse_typecheck_cpu_s': 0.43944799999999873, 'loadavg1': 5.81591796875}
+{'topology': 'chain', 'contracts': 100, 'neighbourhood': 99, 'verdict': 'fits', 'fit_cpu_s': 1.162348999999999, 'parse_typecheck_cpu_s': 0.8664149999999964, 'loadavg1': 5.46923828125}
+{'topology': 'chain', 'contracts': 200, 'neighbourhood': 199, 'verdict': 'fits', 'fit_cpu_s': 2.2922519999999906, 'parse_typecheck_cpu_s': 1.762268000000006, 'loadavg1': 4.86865234375}

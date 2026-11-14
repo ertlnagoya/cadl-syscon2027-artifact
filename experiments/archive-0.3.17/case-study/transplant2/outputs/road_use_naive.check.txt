@@ -1,0 +1,14 @@
+  [ERROR]: Undefined actor 'TOWN_STEWARD' referenced in contract 'ROAD_USE' parties
+  [ERROR]: Undefined actor 'ROBOT' referenced in contract 'ROAD_USE' parties
+  [ERROR]: Undefined actor 'COUNCIL' referenced in contract 'ROAD_USE' parties
+  [ERROR]: Undefined actor 'COUNCIL' referenced in contract 'ROAD_USE' authority
+  [ERROR]: Undefined actor 'ROBOT' referenced in 'on' of the lifecycle transition 'release' of contract 'ROAD_USE' (sender)
+  [ERROR]: Undefined actor 'TOWN_STEWARD' referenced in 'on' of the lifecycle transition 'release' of contract 'ROAD_USE' (receiver)
+  [ERROR]: The monitor 'blocking_guard' of contract 'ROAD_USE' observes 'ROBOT[i].blocking', but 'ROBOT' is not a declared actor (M-1)
+  [ERROR]: Undefined actor 'TOWN_STEWARD' referenced in protocol 'SWITCH' message step sender
+  [ERROR]: Undefined actor 'ROBOT' referenced in protocol 'SWITCH' message step receiver
+  [ERROR]: Undefined actor 'ROBOT' referenced in protocol 'SWITCH' message step sender
+  [ERROR]: Undefined actor 'TOWN_STEWARD' referenced in protocol 'SWITCH' message step receiver
+  [ERROR]: Undefined actor 'TOWN_STEWARD' referenced in protocol 'SWITCH' compute step
+Type check failed: 12 error(s), 0 warning(s)
+rc=1

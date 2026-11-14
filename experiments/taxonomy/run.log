@@ -1,0 +1,48 @@
+{'file': 'a_sos_robot_delivery.cadl', 'operator': 'MK', 'contract': 'DELIVERY_SLA', 'assumption': 'ROBOT[i].battery > 20', 'verify': 0, 'fit': 1, 'fit_kind': 'vacuous'}
+{'file': 'a_sos_robot_delivery.cadl', 'operator': 'MV', 'contract': 'DELIVERY_SLA', 'assumption': 'ROBOT[i].battery > 20', 'verify': 0, 'fit': 1, 'fit_kind': 'vacuous'}
+{'file': 'a_sos_robot_delivery.cadl', 'operator': 'MN', 'contract': 'DELIVERY_SLA', 'assumption': 'ROBOT[i].battery > 20', 'verify': 0, 'fit': 0, 'fit_kind': ''}
+{'file': 'alone_adapted.cadl', 'operator': 'MK', 'contract': 'EVENING_ROUTINE', 'assumption': 'home_arrival_hour <= 21', 'verify': 0, 'fit': 0, 'fit_kind': ''}
+{'file': 'alone_adapted.cadl', 'operator': 'MV', 'contract': 'EVENING_ROUTINE', 'assumption': 'home_arrival_hour <= 21', 'verify': 0, 'fit': 0, 'fit_kind': ''}
+{'file': 'alone_adapted.cadl', 'operator': 'MN', 'contract': 'EVENING_ROUTINE', 'assumption': 'home_arrival_hour <= 21', 'verify': 0, 'fit': 0, 'fit_kind': ''}
+{'file': 'alone_adapted.cadl', 'operator': 'MK', 'contract': 'PART_TIME_JOB', 'assumption': 'shift_start_hour >= 17', 'verify': 0, 'fit': 1, 'fit_kind': 'vacuous'}
+{'file': 'alone_adapted.cadl', 'operator': 'MV', 'contract': 'PART_TIME_JOB', 'assumption': 'shift_start_hour >= 17', 'verify': 0, 'fit': 1, 'fit_kind': 'vacuous'}
+{'file': 'alone_adapted.cadl', 'operator': 'MN', 'contract': 'PART_TIME_JOB', 'assumption': 'shift_start_hour >= 17', 'verify': 0, 'fit': 0, 'fit_kind': ''}
+{'file': 'alone_adjusted.cadl', 'operator': 'MK', 'contract': 'EVENING_ROUTINE', 'assumption': 'home_arrival_hour <= 23', 'verify': 0, 'fit': 1, 'fit_kind': 'vacuous'}
+{'file': 'alone_adjusted.cadl', 'operator': 'MV', 'contract': 'EVENING_ROUTINE', 'assumption': 'home_arrival_hour <= 23', 'verify': 0, 'fit': 1, 'fit_kind': 'vacuous'}
+{'file': 'alone_adjusted.cadl', 'operator': 'MN', 'contract': 'EVENING_ROUTINE', 'assumption': 'home_arrival_hour <= 23', 'verify': 0, 'fit': 0, 'fit_kind': ''}
+{'file': 'alone_adjusted.cadl', 'operator': 'MK', 'contract': 'PART_TIME_JOB', 'assumption': 'shift_start_hour >= 17', 'verify': 0, 'fit': 1, 'fit_kind': 'vacuous'}
+{'file': 'alone_adjusted.cadl', 'operator': 'MV', 'contract': 'PART_TIME_JOB', 'assumption': 'shift_start_hour >= 17', 'verify': 0, 'fit': 1, 'fit_kind': 'vacuous'}
+{'file': 'alone_adjusted.cadl', 'operator': 'MN', 'contract': 'PART_TIME_JOB', 'assumption': 'shift_start_hour >= 17', 'verify': 0, 'fit': 0, 'fit_kind': ''}
+{'file': 'c_sos_taxi_fleet.cadl', 'operator': 'MK', 'contract': 'RIDE_SERVICE', 'assumption': 'TAXI[i].fuel > 10', 'verify': 0, 'fit': 1, 'fit_kind': 'vacuous'}
+{'file': 'c_sos_taxi_fleet.cadl', 'operator': 'MV', 'contract': 'RIDE_SERVICE', 'assumption': 'TAXI[i].fuel > 10', 'verify': 0, 'fit': 1, 'fit_kind': 'vacuous'}
+{'file': 'c_sos_taxi_fleet.cadl', 'operator': 'MN', 'contract': 'RIDE_SERVICE', 'assumption': 'TAXI[i].fuel > 10', 'verify': 0, 'fit': 0, 'fit_kind': ''}
+{'file': 'family_evening_rule.cadl', 'operator': 'MK', 'contract': 'EVENING_ROUTINE', 'assumption': 'home_arrival_hour <= 21', 'verify': 0, 'fit': 1, 'fit_kind': 'vacuous'}
+{'file': 'family_evening_rule.cadl', 'operator': 'MV', 'contract': 'EVENING_ROUTINE', 'assumption': 'home_arrival_hour <= 21', 'verify': 0, 'fit': 1, 'fit_kind': 'vacuous'}
+{'file': 'family_evening_rule.cadl', 'operator': 'MN', 'contract': 'EVENING_ROUTINE', 'assumption': 'home_arrival_hour <= 21', 'verify': 0, 'fit': 0, 'fit_kind': ''}
+{'file': 'household_chores.cadl', 'operator': 'MK', 'contract': 'CHORE_SHARING', 'assumption': 'CHILD[i].age >= 6', 'verify': 0, 'fit': 1, 'fit_kind': 'vacuous'}
+{'file': 'household_chores.cadl', 'operator': 'MV', 'contract': 'CHORE_SHARING', 'assumption': 'CHILD[i].age >= 6', 'verify': 0, 'fit': 1, 'fit_kind': 'vacuous'}
+{'file': 'household_chores.cadl', 'operator': 'MN', 'contract': 'CHORE_SHARING', 'assumption': 'CHILD[i].age >= 6', 'verify': 0, 'fit': 0, 'fit_kind': ''}
+{'file': 'iot_data_sharing.cadl', 'operator': 'MK', 'contract': 'DATA_FRESHNESS', 'assumption': 'network_latency <= 500ms', 'verify': 0, 'fit': 1, 'fit_kind': 'vacuous'}
+{'file': 'iot_data_sharing.cadl', 'operator': 'MV', 'contract': 'DATA_FRESHNESS', 'assumption': 'network_latency <= 500ms', 'verify': 0, 'fit': 1, 'fit_kind': 'vacuous'}
+{'file': 'iot_data_sharing.cadl', 'operator': 'MU', 'contract': 'DATA_FRESHNESS', 'assumption': 'network_latency <= 500ms', 'verify': 0, 'fit': 0, 'fit_kind': ''}
+{'file': 'iot_data_sharing.cadl', 'operator': 'MN', 'contract': 'DATA_FRESHNESS', 'assumption': 'network_latency <= 500ms', 'verify': 0, 'fit': 0, 'fit_kind': ''}
+{'file': 'raspimouse_c_sos.cadl', 'operator': 'MK', 'contract': 'DELIVERY_ASSIGNMENT_CONTRACT', 'assumption': 'length(goal_sequence) > 0', 'verify': 0, 'fit': 1, 'fit_kind': 'vacuous'}
+{'file': 'raspimouse_c_sos.cadl', 'operator': 'MV', 'contract': 'DELIVERY_ASSIGNMENT_CONTRACT', 'assumption': 'length(goal_sequence) > 0', 'verify': 0, 'fit': 1, 'fit_kind': 'vacuous'}
+{'file': 'raspimouse_c_sos.cadl', 'operator': 'MN', 'contract': 'DELIVERY_ASSIGNMENT_CONTRACT', 'assumption': 'length(goal_sequence) > 0', 'verify': 0, 'fit': 0, 'fit_kind': ''}
+{'file': 'robot_delivery.cadl', 'operator': 'MK', 'contract': 'DELIVERY_SLA', 'assumption': 'network_latency <= 200ms', 'verify': 0, 'fit': 1, 'fit_kind': 'vacuous'}
+{'file': 'robot_delivery.cadl', 'operator': 'MV', 'contract': 'DELIVERY_SLA', 'assumption': 'network_latency <= 200ms', 'verify': 0, 'fit': 1, 'fit_kind': 'vacuous'}
+{'file': 'robot_delivery.cadl', 'operator': 'MU', 'contract': 'DELIVERY_SLA', 'assumption': 'network_latency <= 200ms', 'verify': 0, 'fit': 0, 'fit_kind': ''}
+{'file': 'robot_delivery.cadl', 'operator': 'MN', 'contract': 'DELIVERY_SLA', 'assumption': 'network_latency <= 200ms', 'verify': 0, 'fit': 0, 'fit_kind': ''}
+{'file': 'smart_city_traffic.cadl', 'operator': 'MK', 'contract': 'TRAFFIC_FLOW', 'assumption': 'sensor_accuracy >= 0.9', 'verify': 0, 'fit': 1, 'fit_kind': 'vacuous'}
+{'file': 'smart_city_traffic.cadl', 'operator': 'MV', 'contract': 'TRAFFIC_FLOW', 'assumption': 'sensor_accuracy >= 0.9', 'verify': 0, 'fit': 1, 'fit_kind': 'vacuous'}
+{'file': 'smart_city_traffic.cadl', 'operator': 'MN', 'contract': 'TRAFFIC_FLOW', 'assumption': 'sensor_accuracy >= 0.9', 'verify': 0, 'fit': 0, 'fit_kind': ''}
+{'file': 'sos_dsl_robot_delivery.cadl', 'operator': 'MK', 'contract': 'DELIVERY_SLA', 'assumption': 'ROBOT[i].battery > 20', 'verify': 0, 'fit': 1, 'fit_kind': 'vacuous'}
+{'file': 'sos_dsl_robot_delivery.cadl', 'operator': 'MV', 'contract': 'DELIVERY_SLA', 'assumption': 'ROBOT[i].battery > 20', 'verify': 0, 'fit': 1, 'fit_kind': 'vacuous'}
+{'file': 'sos_dsl_robot_delivery.cadl', 'operator': 'MN', 'contract': 'DELIVERY_SLA', 'assumption': 'ROBOT[i].battery > 20', 'verify': 0, 'fit': 0, 'fit_kind': ''}
+{'file': 'supply_chain.cadl', 'operator': 'MK', 'contract': 'SUPPLY_AGREEMENT', 'assumption': 'MANUFACTURER.production_capacity > 0', 'verify': 0, 'fit': 1, 'fit_kind': 'vacuous'}
+{'file': 'supply_chain.cadl', 'operator': 'MV', 'contract': 'SUPPLY_AGREEMENT', 'assumption': 'MANUFACTURER.production_capacity > 0', 'verify': 0, 'fit': 1, 'fit_kind': 'vacuous'}
+{'file': 'supply_chain.cadl', 'operator': 'MN', 'contract': 'SUPPLY_AGREEMENT', 'assumption': 'MANUFACTURER.production_capacity > 0', 'verify': 0, 'fit': 0, 'fit_kind': ''}
+MK {'n': 14, 'verify': 0, 'fit': 13}
+MN {'n': 14, 'verify': 0, 'fit': 0}
+MU {'n': 2, 'verify': 0, 'fit': 0}
+MV {'n': 14, 'verify': 0, 'fit': 13}

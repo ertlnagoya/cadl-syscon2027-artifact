@@ -1,0 +1,21 @@
+Verifying: t7_chain.cadl
+  SoS: Chain
+
+--- Type Check ---
+  [PASS] Type check passed
+
+--- SMT Verification ---
+  [PASS] Contract 'RULE_C' consistency: Assumes and guarantees are jointly satisfiable
+  [PASS] Contract 'DEST_D1' consistency: Assumes and guarantees are jointly satisfiable
+  [PASS] Contract 'DEST_D2' consistency: Assumes and guarantees are jointly satisfiable
+  [PASS] Contract 'RULE_C' assumptions: No assumptions (the contract applies unconditionally)
+  [PASS] Contract 'DEST_D1' assumptions: No assumptions (the contract applies unconditionally)
+  [PASS] Contract 'DEST_D2' assumptions: No assumptions (the contract applies unconditionally)
+  [PASS] Contract 'RULE_C' entailment: No assumes or guarantees to check entailment
+  [PASS] Contract 'DEST_D1' entailment: No assumes or guarantees to check entailment
+  [PASS] Contract 'DEST_D2' entailment: No assumes or guarantees to check entailment
+
+--- Deadlock Detection ---
+  (no protocols to analyze)
+
+Verification PASSED: 10/10 checks passed

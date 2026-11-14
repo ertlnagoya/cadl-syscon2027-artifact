@@ -1,0 +1,2 @@
+Type check passed: robot_town_source.cadl
+rc=0

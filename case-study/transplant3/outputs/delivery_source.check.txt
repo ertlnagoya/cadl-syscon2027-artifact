@@ -1,0 +1,1 @@
+Type check passed: delivery_source.cadl

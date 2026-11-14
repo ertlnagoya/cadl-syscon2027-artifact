@@ -1,0 +1,23 @@
+Verifying: alone_naive.cadl
+  SoS: LivingAloneNaive
+
+--- Type Check ---
+  [ERROR]: Undefined actor 'PARENT' referenced in contract 'EVENING_ROUTINE' parties
+  [ERROR]: Undefined actor 'PARENT' referenced in contract 'EVENING_ROUTINE' authority
+  [ERROR]: Undefined actor 'PARENT' referenced in contract 'EVENING_ROUTINE' information sharing
+  [ERROR]: Undefined actor 'PARENT' referenced in contract 'EVENING_ROUTINE' responsibilities
+  [ERROR]: Undefined actor 'PARENT' referenced in 'on' of the lifecycle transition 'remind' of contract 'EVENING_ROUTINE' (sender)
+  [ERROR]: The monitor 'late_night_watch' of contract 'EVENING_ROUTINE' observes 'PARENT[1].presence', but 'PARENT' is not a declared actor (M-1)
+  [FAIL] 6 error(s)
+
+--- SMT Verification ---
+  [PASS] Contract 'EVENING_ROUTINE' consistency: Assumes and guarantees are jointly satisfiable
+  [PASS] Contract 'EVENING_ROUTINE' assumptions: Assumptions are satisfiable
+  [INFO] Contract 'EVENING_ROUTINE' entailment: Guarantees do not follow from the assumptions alone; they are obligations the parties must meet
+        Counterexample: {'lights_out_hour': '25', 'home_arrival_hour': '0'}
+
+--- Deadlock Detection ---
+  (no protocols to analyze)
+
+Verification FAILED: 2/3 checks passed
+rc=1

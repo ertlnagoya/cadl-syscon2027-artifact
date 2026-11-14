@@ -1,0 +1,33 @@
+Verifying: probes/probe_stale_robot_in_rule.cadl
+  SoS: TaxiFleetRoadUseAdjusted
+
+--- Type Check ---
+  [PASS] Type check passed
+
+--- SMT Verification ---
+  [PASS] Contract 'RIDE_SERVICE' consistency: Assumes and guarantees are jointly satisfiable
+  [PASS] Contract 'ROAD_SHARING' consistency: Assumes and guarantees are jointly satisfiable
+  [PASS] Contract 'ROAD_USE' consistency: Assumes and guarantees are jointly satisfiable
+  [PASS] Contract 'RIDE_SERVICE' assumptions: Assumptions are satisfiable
+  [PASS] Contract 'ROAD_SHARING' assumptions: Assumptions are satisfiable
+  [PASS] Contract 'ROAD_USE' assumptions: Assumptions are satisfiable
+  [INFO] Contract 'RIDE_SERVICE' entailment: Guarantees do not follow from the assumptions alone; they are obligations the parties must meet
+        Counterexample: {'TAXI_i_fuel': '600001', 'pickup_time': '600001', 'TAXI_i_is_available': 'True'}
+  [INFO] Contract 'ROAD_SHARING' entailment: Guarantees do not follow from the assumptions alone; they are obligations the parties must meet
+        Counterexample: {'road_status_accuracy': '0', 'TAXI_i_sensors_operational': 'True'}
+  [INFO] Contract 'ROAD_USE' entailment: Guarantees do not follow from the assumptions alone; they are obligations the parties must meet
+        Counterexample: {'pickup_time': '0', 'hold_time': '60001', 'TAXI_i_is_available': 'True', 'idle_taxis': '0', 'rank_drive_time': '0', 'rank_capacity': '0'}
+  [PASS] Cross-contract 'RIDE_SERVICE' x 'ROAD_SHARING': Contracts are jointly satisfiable
+  [PASS] Cross-contract 'RIDE_SERVICE' x 'ROAD_USE': Contracts are jointly satisfiable
+  [PASS] Cross-contract 'ROAD_SHARING' x 'ROAD_USE': Contracts are jointly satisfiable
+  [PASS] Transition exclusivity: NORMAL -> PEAK_DEMAND vs NORMAL -> INCIDENT_RESPONSE: Transition conditions are mutually exclusive
+  [PASS] Transition exclusivity: PEAK_DEMAND -> NORMAL vs PEAK_DEMAND -> INCIDENT_RESPONSE: Transition conditions are mutually exclusive
+  [PASS] Regime reachability: All states reachable from initial state
+  [PASS] Regime dead states: No dead-end states
+
+--- Deadlock Detection ---
+  [PASS] Protocol 'RIDE_MATCHING' deadlock: No circular dependencies found
+  [PASS] Protocol 'CONFLICT_RESOLUTION' deadlock: No circular dependencies found
+  [PASS] Protocol 'INCIDENT_BROADCAST' deadlock: No circular dependencies found
+
+Verification PASSED: 17/17 checks passed

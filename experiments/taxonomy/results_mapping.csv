@@ -1,0 +1,15 @@
+file,contract,attribute,fit_unmapped,fit_mapped,kind
+a_sos_robot_delivery.cadl,DELIVERY_SLA,battery,0,1,vacuous
+alone_adapted.cadl,EVENING_ROUTINE,home_arrival_hour,0,0,
+alone_adapted.cadl,PART_TIME_JOB,shift_start_hour,0,1,vacuous
+alone_adjusted.cadl,EVENING_ROUTINE,home_arrival_hour,0,1,vacuous
+alone_adjusted.cadl,PART_TIME_JOB,shift_start_hour,0,1,vacuous
+c_sos_taxi_fleet.cadl,RIDE_SERVICE,fuel,0,1,vacuous
+family_evening_rule.cadl,EVENING_ROUTINE,home_arrival_hour,0,1,vacuous
+household_chores.cadl,CHORE_SHARING,age,0,1,vacuous
+iot_data_sharing.cadl,DATA_FRESHNESS,network_latency,0,1,vacuous
+raspimouse_c_sos.cadl,DELIVERY_ASSIGNMENT_CONTRACT,length,0,1,vacuous
+robot_delivery.cadl,DELIVERY_SLA,network_latency,0,1,vacuous
+smart_city_traffic.cadl,TRAFFIC_FLOW,sensor_accuracy,0,1,vacuous
+sos_dsl_robot_delivery.cadl,DELIVERY_SLA,battery,0,1,vacuous
+supply_chain.cadl,SUPPLY_AGREEMENT,production_capacity,0,1,vacuous

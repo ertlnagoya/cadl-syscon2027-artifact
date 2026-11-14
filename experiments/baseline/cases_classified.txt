@@ -1,0 +1,4 @@
+alone_adapted.cadl ['EVENING_ROUTINE', 'PART_TIME_JOB'] F3a vacuous
+road_use_adapted.cadl ['RIDE_SERVICE', 'ROAD_USE'] F3a vacuous
+delivery_sla_adapted.cadl ['DELIVERY_ASSIGNMENT_CONTRACT', 'DELIVERY_SLA'] F3a vacuous
+probe_scope_occupied_taxis.cadl ['RIDE_SERVICE', 'ROAD_USE'] F3c exclusion

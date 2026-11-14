@@ -1,0 +1,29 @@
+sos:
+  name: "ThreeWay"
+  type: Collaborative
+  version: "1.0.0"
+  actors:
+    - id: "TAXI[1..N]"
+      role: "taxi"
+      autonomy: high
+    - id: CENTER
+      role: "center"
+      autonomy: low
+    - id: DEPOT
+      role: "depot"
+      autonomy: low
+  contracts:
+    - id: RULE_C
+      parties: [CENTER, "TAXI[*]", DEPOT]
+      assume:
+        - "shift_hours + commute_hours <= 10"
+      guarantee:
+        - "rest_hours >= 8"
+    - id: DEST_D1
+      parties: [CENTER, "TAXI[*]"]
+      guarantee:
+        - "shift_hours >= 9"
+    - id: DEST_D2
+      parties: [DEPOT, "TAXI[*]"]
+      guarantee:
+        - "commute_hours >= 2"

@@ -1,0 +1,12 @@
+  [ERROR]: Undefined actor 'DISPATCHER' referenced in contract 'DELIVERY_SLA' parties
+  [ERROR]: Undefined actor 'CUSTOMER' referenced in contract 'DELIVERY_SLA' parties
+  [ERROR]: Undefined actor 'DISPATCHER' referenced in contract 'DELIVERY_SLA' assume
+  [ERROR]: Undefined actor 'DISPATCHER' referenced in contract 'DELIVERY_SLA' authority
+  [ERROR]: Undefined actor 'DISPATCHER' referenced in contract 'DELIVERY_SLA' information views
+  [ERROR]: Undefined actor 'CUSTOMER' referenced in contract 'DELIVERY_SLA' information views
+  [ERROR]: Undefined actor 'DISPATCHER' referenced in contract 'DELIVERY_SLA' information sharing
+  [ERROR]: Undefined actor 'DISPATCHER' referenced in contract 'DELIVERY_SLA' information sharing
+  [ERROR]: Undefined actor 'DISPATCHER' referenced in contract 'DELIVERY_SLA' information sharing
+  [ERROR]: Undefined actor 'CUSTOMER' referenced in contract 'DELIVERY_SLA' information sharing
+Type check failed: 10 error(s), 0 warning(s)
+rc=1
