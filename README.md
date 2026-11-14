@@ -9,6 +9,7 @@ Checking for Governance Rules Transplanted Between Systems of Systems* (submitte
 |---|---|
 | `cadl` (check, verify) | 0.3.28, commit 01658ea, https://github.com/ertlnagoya/cadl |
 | `cadl fit` | branch `feature/fit-check`, pull request ertlnagoya/cadl#76; evaluated at commit 443213f (9e9ce43 adds tests and changes one message) |
+| `cadl fit` history | prototype on top of `cadl` 0.3.30 whose parser and verifier are those of 0.3.28 (its type checker differs only in messages and for the norms extension); commits f36d269 (first experiments), 5934498, 3c91f0b, 2d59e60 (connected-component neighbourhood), 443213f (F3d split, maximal-set enumeration; the paper's results), 9e9ce43 (tests, one message). Earlier commits gave the same counts except for one MK, one MV, and one mapped MN mutant that the F3d split unmasked. |
 | CADL specification | commit f7b148a, https://github.com/ertlnagoya/cadl-spec |
 | Python / Z3 | 3.14.8 / 5.3.0 |
 
