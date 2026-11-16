@@ -10,6 +10,7 @@ Checking for Governance Rules Transplanted Between Systems of Systems* (submitte
 | `cadl` (check, verify) | 0.3.28, commit 01658ea, https://github.com/ertlnagoya/cadl |
 | `cadl fit` | branch `feature/fit-check`, pull request ertlnagoya/cadl#76; evaluated at commit 443213f (9e9ce43 adds tests and changes one message) |
 | `cadl fit` history | prototype on top of `cadl` 0.3.30 whose parser and verifier are those of 0.3.28 (its type checker differs only in messages and for the norms extension); commits f36d269 (first experiments), 5934498, 3c91f0b, 2d59e60 (connected-component neighbourhood), 443213f (F3d split, maximal-set enumeration; the paper's results), 9e9ce43 (tests, one message). Earlier commits gave the same counts except for one MK, one MV, and one mapped MN mutant that the F3d split unmasked. |
+| `cadl fit` after the paper | the branch was merged with `cadl` 0.3.31 and 0.3.32 (commit 2469844); `fit.py` and its tests are unchanged since 9e9ce43, and `run_fit.py`, `classification/cases.py`, and `taxonomy/mapping.py` give identical results there. `cadl fit` does not use the regime bindings or the amendment extension added in 0.3.32. |
 | CADL specification | commit f7b148a, https://github.com/ertlnagoya/cadl-spec |
 | Python / Z3 | 3.14.8 / 5.3.0 |
 
@@ -39,7 +40,7 @@ Apple M3 under the load averages given in the logs.
 ## Provenance
 
 Eleven mutation subjects are example descriptions distributed with `cadl` 0.3.17, and the robot-town
-subject comes from CADL Explorer (both Apache-2.0). The flight-authorization case formalizes Regulation
+subject comes from CADL Explorer 0.5.17 (commit 3ce3416; the file is unchanged in Explorer 1.1.0) (both Apache-2.0). The flight-authorization case formalizes Regulation
 (EU) 2021/664 (via the EASA Easy Access Rules), SERA.6005(c) of Regulation (EU) 2021/666, the FAA UTM
 Concept of Operations v2.0, and 14 CFR Part 89; each contract names the article or page it formalizes.
 The proposition names, and hence the conflicts, follow the authors' reading of these documents.
