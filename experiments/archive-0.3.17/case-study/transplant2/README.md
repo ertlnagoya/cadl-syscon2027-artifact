@@ -7,7 +7,7 @@ Toolchain: `cadl 0.3.17` (`outputs/version.txt`). Every `.cadl` file here was ru
 | File | Role |
 |---|---|
 | `robot_town_source.cadl` | Source: unchanged copy of `cadl-explorer/designs/robot_town.cadl` (Collaborative; TOWN_STEWARD, ROBOT[1..N], COUNCIL) |
-| `taxi_destination.cadl` | Destination baseline: unchanged copy of `cadl_repo/examples/c_sos_taxi_fleet.cadl` (Collaborative; TAXI[1..N], PASSENGER[1..M], TRAFFIC_CENTER) |
+| `taxi_destination.cadl` | Destination baseline: unchanged copy of `examples/c_sos_taxi_fleet.cadl` (Collaborative; TAXI[1..N], PASSENGER[1..M], TRAFFIC_CENTER) |
 | `road_use_naive.cadl` | ROAD_USE, the DISTRIBUTED<->CENTRALIZED regime switch with its safety invariant, and the SWITCH protocol, all copied unchanged into the destination |
 | `road_use_adapted.cadl` | ROAD_USE with roles mapped and preconditions stated. The destination's RIDE_SERVICE and ROAD_SHARING are kept unchanged |
 | `road_use_adjusted.cadl` | The adapted file with the conflict resolved |

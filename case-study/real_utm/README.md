@@ -17,7 +17,7 @@ state authority, and air traffic control.
 | RID | 14 CFR Part 89, 86 FR 4390 (Jan 15, 2021) | REMOTE_ID |
 
 Each contract in the two files carries the article or page it formalizes. The research notes with
-quotations are not included; the article or page of each contract is given in a comment.
+quotations are not included.
 
 ## Modelling decisions (threats to validity)
 
@@ -35,7 +35,7 @@ quotations are not included; the article or page of each contract is given in a 
 
 ## Results
 
-cadl verify: 0.3.28 (tag v0.3.28; same results with v0.3.29 and the fit branch). cadl fit: commit 5934498, re-run with 2d59e60 (connected-component neighbourhood: the neighbourhood now also lists MANNED_PARTICIPATION, findings unchanged; 74775be gave the same verdicts; it reported only EQUITY on the naive copy, because it stopped at disjoint conflicts).
+cadl verify: 0.3.28 (tag v0.3.28; same results with v0.3.29 and the fit branch). cadl fit: commit 5934498, re-run with 2d59e60 (connected-component neighbourhood: the neighbourhood now also lists MANNED_PARTICIPATION, findings unchanged; 74775be gave the same verdicts; it reported only EQUITY on the naive copy, because it stopped at disjoint conflicts). The results are the same with commits 443213f (the paper) and b3f1f16.
 
 | Step | File | `cadl verify` | `cadl fit -c FLIGHT_AUTHORISATION` |
 |---|---|---|---|

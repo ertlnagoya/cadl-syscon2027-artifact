@@ -1,6 +1,6 @@
 # CADL mutation analysis — summary
 
-Toolchain: cadl 0.3.17 (cadl_repo commit ace2679, clean tree), z3 5.3.0, PyYAML 6.0.3, Python 3.14.8.
+Toolchain: cadl 0.3.17 (cadl commit ace2679, clean tree), z3 5.3.0, PyYAML 6.0.3, Python 3.14.8.
 Run: 2026-10-21. 15 mutated subjects (alone_naive.cadl is a negative control and is not mutated).
 556 mutants, 0 invalid, 0 timeouts. Full per-mutant data: `results.csv`; numbers: `summary.csv`.
 

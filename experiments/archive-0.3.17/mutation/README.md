@@ -18,7 +18,7 @@ Nothing was downloaded.
 
 `subjects/` contains copies of 16 files. `subjects/SHA256SUMS` holds their hashes.
 
-- the 11 files cadl_repo/examples/*.cadl
+- the 11 files examples/*.cadl of the cadl repository
 - cadl-explorer/designs/robot_town.cadl
 - case-study/{family_evening_rule, alone_naive, alone_adapted, alone_adjusted}.cadl
 
@@ -28,7 +28,7 @@ alone_naive.cadl is used only as a negative control and is not mutated, so 15 fi
 
 ```sh
 cd experiments/mutation
-PY=$PY
+PY=/path/to/python   # with cadl 0.3.28 installed
 $PY run.py control      # step 1: YAML round-trip control -> control.csv, control/
 $PY run.py generate     # step 2: mutate.py -> mutants/<subject>/<OP>_<k>.cadl, mutants/manifest.json
 $PY run.py run          # step 3: cadl check + cadl verify --format json per mutant -> results.csv (~6 min)

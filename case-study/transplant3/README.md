@@ -6,8 +6,8 @@ Toolchain: `cadl 0.3.28` (first run with 0.3.17 gave identical results) (`output
 
 | File | Role |
 |---|---|
-| `delivery_source.cadl` | Source: unchanged copy of `cadl_repo/examples/a_sos_robot_delivery.cadl` (Acknowledged; DISPATCHER, ROBOT[1..N], CUSTOMER[1..M]) |
-| `raspimouse_destination.cadl` | Destination baseline: unchanged copy of `cadl_repo/examples/raspimouse_c_sos.cadl` (Collaborative; ARBITRATOR, TASK_OWNER, ROBOT[1..5]) |
+| `delivery_source.cadl` | Source: unchanged copy of `examples/a_sos_robot_delivery.cadl` (Acknowledged; DISPATCHER, ROBOT[1..N], CUSTOMER[1..M]) |
+| `raspimouse_destination.cadl` | Destination baseline: unchanged copy of `examples/raspimouse_c_sos.cadl` (Collaborative; ARBITRATOR, TASK_OWNER, ROBOT[1..5]) |
 | `delivery_sla_naive.cadl` | DELIVERY_SLA copied unchanged into the destination |
 | `delivery_sla_adapted.cadl` | Authority moved to peer robots. The destination's ROUTE_VERIFICATION and DELIVERY_ASSIGNMENT_CONTRACT are kept unchanged |
 | `delivery_sla_adjusted.cadl` | The adapted file with the conflict resolved |

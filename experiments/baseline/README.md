@@ -6,7 +6,7 @@ assume/guarantee contract theory on saturated contracts and their parallel compo
 next to the fit conditions (F2) and (F3), and reports whether a pair has a vacuous rule (G_d implies not A_c).
 
 ```sh
-PY=$PY
+PY=/path/to/python   # with cadl 0.3.28 installed
 $PY -I baseline.py ../../case-study/alone_adapted.cadl ...       # cases
 $PY -I run_mutants.py ../mutation/results.csv mutants_baseline.csv  # MC1-MC4 mutants
 ```

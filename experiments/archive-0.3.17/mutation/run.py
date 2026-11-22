@@ -45,6 +45,18 @@ OPS = ["MA1", "MA2", "MA3", "MC1", "MC2", "MC3", "MC4", "MC5", "MR1", "MR2", "MR
 sys.path.insert(0, str(HERE))
 
 
+def mutant_path(p: str) -> Path:
+    """Path of a mutant listed in a manifest. The shipped manifests give paths relative to the root
+    of the artifact; resolve them against this directory so that the script runs from anywhere."""
+    q = Path(p)
+    if q.is_absolute() and q.exists():
+        return q
+    for i, part in enumerate(q.parts):
+        if part in ("mutants", "mutants_uncapped"):
+            return HERE.joinpath(*q.parts[i:])
+    return HERE / q
+
+
 def _norm(s: str) -> str:
     return re.sub(r" at line \d+, col \d+", "", s).strip()
 
@@ -142,7 +154,7 @@ def classify(m: dict, base: dict, r: dict) -> dict:
     exp = [re.compile(e) for e in m["expected"]]
     hit = lambda s: any(e.search(s) for e in exp)
     out = {"file": m["file"], "operator": m["op"], "instance": m["instance"],
-           "mutant_path": str(Path(m["path"]).relative_to(HERE)), "description": m["description"]}
+           "mutant_path": str(mutant_path(m["path"]).relative_to(HERE)), "description": m["description"]}
     if "invalid" in r:
         return {**out, "outcome": "MUTANT-INVALID", "first_item": r["invalid"], "on_target": "",
                 "new_errors": "", "new_failed": "", "new_warnings": ""}
@@ -181,7 +193,7 @@ def cmd_run(mut=MUT, out_csv="results.csv"):
         rt.write_text(mutate.dump(mutate.load((SUBJ / f).read_text(encoding="utf-8"))), encoding="utf-8")
         baselines[f] = run_tools(rt)
     with ThreadPoolExecutor(max_workers=8) as ex:
-        results = list(ex.map(lambda m: run_tools(Path(m["path"])), manifest))
+        results = list(ex.map(lambda m: run_tools(mutant_path(m["path"])), manifest))
     rows = [classify(m, baselines[m["file"]], r) for m, r in zip(manifest, results)]
     fields = ["file", "operator", "instance", "mutant_path", "outcome", "first_item", "on_target",
               "description", "new_errors", "new_failed", "new_warnings"]

@@ -1,6 +1,6 @@
 # Encoding probes (cadl 0.3.28, 2026-11-14)
 
-Seven small descriptions, written during an internal review, that show where `cadl verify` errs.
+Seven small descriptions, that show where `cadl verify` errs.
 Outputs are in `*.verify.txt`.
 
 | File | Situation | Ground truth | `cadl verify` | Error |

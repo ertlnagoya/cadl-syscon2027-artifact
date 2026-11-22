@@ -2,7 +2,7 @@
 
 `taxonomy.py` adds destination contracts that make a contract's numeric assumption `x OP k`
 impossible in ways the original MC operators do not cover (see the docstring). Each mutant is
-checked with `cadl verify` (cadl_repo venv; verifier unchanged since 0.3.28) and with
+checked with `cadl verify` (cadl 0.3.28 installed; verifier unchanged since 0.3.28) and with
 `cadl fit -c <contract>` (branch feature/fit-check). Results: `results.csv`, `run.log`, `mutants/`.
 
 | Operator | Mutants | verify | fit |
@@ -22,3 +22,11 @@ vacuous), so its MK and MV mutants, previously masked (12 of 14), are now flagge
 For each MN mutant, the transplanted contract's attribute `x` is renamed to the destination's `x_v2`
 (what `cadl fit --map x=x_v2` does for a contract taken from a source). `cadl fit` then flags 13 of 14
 (the other is masked in `alone_adapted.cadl`; 12 of 14 before 443213f); without the mapping, 0 of 14.
+
+Commands (from this directory; `FIT_SRC` is the `src/` of the fit branch; `mapping.py` reads
+`../mutation/subjects`):
+
+```
+$PY -I taxonomy.py FIT_SRC results.csv
+$PY -I mapping.py FIT_SRC results.csv results_mapping.csv
+```

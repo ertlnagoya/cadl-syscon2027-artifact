@@ -1,8 +1,14 @@
 # `cadl fit` on the mutants, cases, and probes (2026-11-14)
 
-`cadl fit` is a prototype on branch `feature/fit-check` of the cadl repository
-(worktree a checkout of the cadl branch feature/fit-check, commit f36d269 on 0.3.30, re-run with 5934498, 3c91f0b, and 2d59e60 with the same counts; the verifier is
+`cadl fit` is a prototype on branch `feature/fit-check` of the cadl repository (first run at commit
+f36d269 on 0.3.30, re-run with 5934498, 3c91f0b, and 2d59e60 with the same counts; the verifier is
 unchanged from 0.3.28). It is not released.
+
+Commands (from this directory; `FIT_SRC` is the `src/` of the fit branch):
+
+```
+$PY -I run_fit.py FIT_SRC ../mutation/results.csv results_fit.csv > run_fit.log
+```
 
 - `run_fit.py`: every contract of every mutant and subject; `results_fit.csv`.
 - Mutants (compared with `cadl verify` in ../mutation/results.csv):
