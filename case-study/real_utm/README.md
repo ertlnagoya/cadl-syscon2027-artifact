@@ -35,7 +35,7 @@ quotations are not included.
 
 ## Results
 
-cadl verify: 0.3.28 (tag v0.3.28; same results with v0.3.29 and the fit branch). cadl fit: commit 5934498, re-run with 2d59e60 (connected-component neighbourhood: the neighbourhood now also lists MANNED_PARTICIPATION, findings unchanged; 74775be gave the same verdicts; it reported only EQUITY on the naive copy, because it stopped at disjoint conflicts). The results are the same with commits 443213f (the paper) and b3f1f16.
+cadl verify: 0.3.28 (tag v0.3.28; same results with v0.3.29 and the fit branch). cadl fit: commit 5934498, re-run with 2d59e60 (connected-component neighbourhood: the neighbourhood now also lists MANNED_PARTICIPATION, findings unchanged; 74775be gave the same verdicts; it reported only EQUITY on the naive copy, because it stopped at disjoint conflicts). The results are the same with commits 443213f (the paper), b3f1f16 and f2be5d9.
 
 | Step | File | `cadl verify` | `cadl fit -c FLIGHT_AUTHORISATION` |
 |---|---|---|---|

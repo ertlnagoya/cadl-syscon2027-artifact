@@ -18,6 +18,6 @@ Each pair of the three contracts is satisfiable; the three are not.
 | adapted.cadl | 361 | PASSED 22/22 | MISFIT: F3 vacuous, only jointly: CLAIM_TIMEOUT, DELIVERY_ASSIGNMENT_CONTRACT |
 | adjusted.cadl (`assignment_latency <= 7s`) | 361 | PASSED 22/22 | FITS |
 
-Outputs are in `outputs/`. The `cadl fit` results are the same with commits 443213f (the paper) and
-b3f1f16. Command: `PYTHONPATH=FIT_SRC python -m cadl.cli fit adapted.cadl -c DELIVERY_SLA` (likewise for
+Outputs are in `outputs/`. The `cadl fit` results are the same with commits 443213f (the paper),
+b3f1f16 and f2be5d9. Command: `PYTHONPATH=FIT_SRC python -m cadl.cli fit adapted.cadl -c DELIVERY_SLA` (likewise for
 `adjusted.cadl`).
