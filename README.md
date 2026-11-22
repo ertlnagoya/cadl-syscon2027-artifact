@@ -1,7 +1,7 @@
 # Artifact: Static Fit Checking for Governance Rules Transplanted Between Systems of Systems
 
-Descriptions, scripts, and raw results for the paper *Will the Rule Still Work There? Static Fit
-Checking for Governance Rules Transplanted Between Systems of Systems* (submitted to IEEE SysCon 2027).
+Descriptions, scripts, and raw results for the paper *Contract-Based Fit Checking of Governance
+Rules Transplanted Between Systems of Systems* (submitted to IEEE SysCon 2027).
 
 ## Tools
 
